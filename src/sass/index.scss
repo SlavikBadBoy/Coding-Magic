@@ -1,2 +1,6 @@
-@import './common';
-@import './example';
+@import './global/reset';
+@import './utils/variables';
+@import './utils/placeholders';
+@import './global/global';
+@import './global/common';
+@import './components/calculator.scss';
