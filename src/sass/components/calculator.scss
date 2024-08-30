@@ -25,6 +25,9 @@
     flex-wrap: wrap;
   }
   &__operator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-basis: calc((100% - 10px) / 2);
     @extend %buttonStyle;
     text-align: center;

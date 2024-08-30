@@ -10,26 +10,22 @@
         placeholder="Введіть число"
       />
       <div class="calculator__operators">
-        <button class="calculator__operator">+</button>
-        <button class="calculator__operator">*</button>
-        <button class="calculator__operator">-</button>
-        <button class="calculator__operator">/</button>
+        <button class="calculator__operator" id="operator-plus">+</button>
+        <button class="calculator__operator" id="operator-multiplication">
+          *
+        </button>
+        <button class="calculator__operator" id="operator-minus">-</button>
+        <button class="calculator__operator" id="operator-division">/</button>
       </div>
-      <label for="calculator-first-number">Друге число</label>
+      <label for="calculator-second-number">Друге число</label>
       <input
         type="number"
         class="calculator__input"
         id="calculator-second-number"
         placeholder="Введіть число"
       />
-      <button class="calculator__operator">=</button>
-      <label for="calculator-first-number">Результат</label>
-      <input
-        type="number"
-        class="calculator__input"
-        id="calculator-result"
-        placeholder="Результат"
-      />
+      <button class="calculator__operator" id="operator-equals">=</button>
+      <span class="calculator__input" id="calculator-result">Результат</span>
     </div>
   </div>
 </section>
