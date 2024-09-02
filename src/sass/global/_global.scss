@@ -4,6 +4,7 @@ img {
   max-width: 100%;
 }
 body {
+  font-family: $fontTextPrimary;
   font-weight: 400;
   font-size: 12px;
   color: $colorTextPrimary;
@@ -15,10 +16,16 @@ input::-webkit-inner-spin-button {
 label {
   display: none;
 }
+
 .title {
   font-family: $fontTextPrimary;
   font-size: 16px;
   line-height: calc(20px / 16px);
+}
+
+.container {
+  max-width: 1090px;
+  margin: 0 auto;
 }
 @media (min-width: 1024px) {
 }
