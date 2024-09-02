@@ -1,0 +1,151 @@
+.header {
+  &__container {
+    padding: 32px 0;
+    display: flex;
+    gap: 80px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 93px;
+    height: 38px;
+  }
+  &__nav {
+    width: 100%;
+    align-items: center;
+    display: flex;
+  }
+}
+
+.menu__list {
+  display: flex;
+  gap: 50px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-list__wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.links__item {
+  position: relative;
+}
+
+.links__link {
+  font-size: 12px;
+}
+
+.links__link--interactive {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &::after {
+    content: '';
+    background-image: url('/src/images/header/arrow.svg');
+    width: 11px;
+    height: 7px;
+    display: flex;
+    background-repeat: no-repeat;
+  }
+}
+
+.submenu {
+  position: absolute;
+  padding-top: 20px;
+  min-width: 160px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+
+  &__wrapper {
+    border: 1px solid $colorTextPrimary;
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-clip: padding-box;
+  }
+  &__item {
+    padding: 10px 50px;
+    text-align: center;
+    &:hover {
+      background-color: $backgroundColorTertiary;
+    }
+    &:last-child:hover {
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+}
+
+.links__item--interactive:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+// switch
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $backgroundColorSecondary;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  background-color: $colorButton;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border: 0.5px solid $colorTextPrimary;
+  background-image: url('/src/images/header/sun.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-image: url('/src/images/header/moon.svg');
+  background-color: $colorTextPrimary;
+}
+
+.slider {
+  border-radius: 34px;
+}
+
+.slider:before {
+  border-radius: 50%;
+}
