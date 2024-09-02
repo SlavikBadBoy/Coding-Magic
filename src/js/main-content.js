@@ -14,5 +14,5 @@ const renderGames = games => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderGames();
+  renderGames(games);
 });
