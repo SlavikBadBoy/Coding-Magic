@@ -1,0 +1,27 @@
+.maximum__container {
+  text-align: center;
+}
+.maximum__title {
+  margin-bottom: 36px;
+  font-size: 16px;
+  color: $colorTextPrimary;
+}
+.maximum__inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+  gap: 38px;
+}
+.maximum__input {
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: $backgroundColorPrimary;
+  font-size: 12px;
+  color: $colorTextSecondary;
+  box-shadow: inset -3 -3 0 0 $backgroundColorSecondary;
+}
+.maximum__text {
+  font-size: 12px;
+  color: $colorTextPrimary;
+}
