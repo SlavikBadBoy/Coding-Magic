@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   renderGames(games, 'all');
 });
 
-const sumbenu = document.querySelector('.submenu');
-const sumbenuHandler = event => {
+const submenu = document.querySelector('.submenu');
+const submenuHandler = event => {
   switch (event.target.dataset.category) {
     case 'numerical':
       renderGames(games, 'numerical');
@@ -38,4 +38,4 @@ const sumbenuHandler = event => {
   }
 };
 
-sumbenu.addEventListener('click', sumbenuHandler);
+submenu.addEventListener('click', submenuHandler);
