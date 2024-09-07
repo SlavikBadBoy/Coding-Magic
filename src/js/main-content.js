@@ -1,19 +1,19 @@
 import games from './games';
 
-const main = document.querySelector('#main');
-
 const renderGames = (games, category) => {
-  main.innerHTML = games
+  const main = document.querySelector('#main');
+  const filteredGames = games
     .filter(game => category === 'all' || game.category.includes(category))
     .map(
       game =>
         `<section class='section'>
-      <div class="container">
-        <div class="game ${game.class}"></div>
-      </div>
-    </section>`
+    <div class="container">
+      <div class="game ${game.class}"></div>
+    </div>
+  </section>`
     )
     .join('');
+  main.innerHTML = filteredGames;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const sumbenu = document.querySelector('.submenu');
+
 const sumbenuHandler = event => {
   switch (event.target.dataset.category) {
     case 'numerical':
