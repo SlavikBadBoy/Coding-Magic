@@ -7,7 +7,7 @@ const renderGames = (games, category) => {
     .map(
       game =>
         `<section class='section'>
-    <div class="container">
+    <div class="container ${game.class}__container game__container">
       <div class="game ${game.class}"></div>
     </div>
   </section>`

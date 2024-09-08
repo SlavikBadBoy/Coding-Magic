@@ -3,10 +3,13 @@ class rockPaperScissors {
     this.robotScore = 0;
     this.userScore = 0;
     this.game = document.querySelector('.rock-paper-scissors');
+    this.gameContainer = document.querySelector(
+      '.rock-paper-scissors__container'
+    );
     this.buttons = [
-      { name: 'rock', class: 'button__rock' },
-      { name: 'scissors', class: 'button__scissors' },
-      { name: 'paper', class: 'button__paper' },
+      { name: 'rock', class: 'rock' },
+      { name: 'scissors', class: 'scissors' },
+      { name: 'paper', class: 'paper' },
     ];
     this.init();
   }
@@ -15,19 +18,27 @@ class rockPaperScissors {
     this.renderButtons();
     this.addEventListeners();
     this.renderScore();
+    this.renderResult();
   }
 
   renderButtons() {
+    // Тайтл секції
+    const gameTitle = document.createElement('h2');
+    gameTitle.classList.add('rock-paper-scissors__title');
+    gameTitle.classList.add('title');
+    gameTitle.textContent = 'Камінь - ножиці - папір';
+    this.gameContainer.prepend(gameTitle);
+
     // Контейнер
     const gameButtons = document.createElement('div');
-    gameButtons.classList.add('game__buttons');
+    gameButtons.classList.add('rock-paper-scissors__buttons');
     this.game.append(gameButtons);
 
     // Кнопки
     gameButtons.innerHTML = this.buttons
       .map(
         button =>
-          `<button type='button' class='button ${button.class}' data-name = '${button.name}'>${button.name}</button>`
+          `<button type='button' class='button rock-paper-scissors__button--${button.class} rock-paper-scissors__button' data-name = '${button.name}'></button>`
       )
       .join('');
   }
@@ -44,15 +55,32 @@ class rockPaperScissors {
   buttonsScoreHandler(event) {
     const userChoice = event.target.dataset.name;
     const robotChoice = this.robotPick();
-
     const result = this.getResult(userChoice, robotChoice);
 
+    const resultText = document.querySelector('.result__text');
+    const robotWinMessage = 'Комп’ютер виграв раунд!';
+    const userWinMessage = 'Ви виграли раунд!';
+    const drawMessage = 'Нічия!';
+
     if (result === 'user') {
+      resultText.innerHTML = userWinMessage;
+      resultText.style.color = '#039900'; // зелений
       this.userScore += 1;
     }
     if (result === 'robot') {
+      resultText.innerHTML = robotWinMessage;
+      resultText.style.color = '#990000'; // червоний
       this.robotScore += 1;
     }
+    if (result === 'draw') {
+      resultText.innerHTML = drawMessage;
+      resultText.style.color = '#039900'; // зелений
+      this.robotScore += 1;
+      this.userScore += 1;
+    }
+
+    const resultButton = document.querySelector('.result__button');
+    resultButton.innerHTML = `Варіант комп'ютера: ${robotChoice}`;
     this.renderScore();
   }
 
@@ -69,6 +97,8 @@ class rockPaperScissors {
       (userChoice === 'rock' && robotChoice === 'scissors')
     ) {
       return 'user';
+    } else if (userChoice === robotChoice) {
+      return 'draw';
     } else {
       return 'robot';
     }
@@ -87,9 +117,26 @@ class rockPaperScissors {
     // content
     scoreContainer.innerHTML = `
     <h2 class="result__title">Рахунок:</h2>
-    <p class="robot__output">${this.robotScore}</p>
-    <p class="user__output">${this.userScore}</p>
+    <p class="robot__output">Комп’ютер - ${this.robotScore}</p>
+    <p class="user__output">Ви - ${this.userScore}</p>
   `;
+  }
+
+  renderResult() {
+    const resultContainer = document.createElement('div');
+    resultContainer.classList.add('result__container');
+    this.gameContainer.appendChild(resultContainer);
+
+    const resultText = document.createElement('p');
+    resultText.classList.add('result__text');
+    resultText.innerHTML = 'Щоб почати гру натисніть на будь який варіант!';
+
+    const resultButton = document.createElement('p');
+    resultButton.type = 'button';
+    resultButton.classList.add('result__button');
+    resultButton.innerHTML = "Варіант комп'ютера";
+
+    resultContainer.append(resultText, resultButton);
   }
 }
 
