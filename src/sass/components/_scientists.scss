@@ -1,0 +1,63 @@
+.scientist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  &__buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__buttons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-basis: calc((100% - 35px) / 2);
+  }
+  &--buttons-list-left {
+    align-items: flex-end;
+  }
+  &--buttons-list-right {
+    align-items: flex-start;
+  }
+  &__button {
+    @extend %buttonStyle;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: left;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+  }
+  &--button {
+    max-width: 489px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 36px;
+    column-gap: 59px;
+    max-width: 577px;
+  }
+  &__item {
+    border-radius: 20px;
+    height: 100px;
+    background: $backgroundColorFourth;
+    flex-basis: calc((100% - 177px) / 4);
+  }
+}
+.scientist-card {
+  position: relative;
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 8px;
+    line-height: 170%;
+  }
+}

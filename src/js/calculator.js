@@ -1,3 +1,5 @@
+//розмітка
+
 //змінні елементів
 const firstNumber = document.querySelector('#calculator-first-number');
 const secondNumber = document.querySelector('#calculator-second-number');
