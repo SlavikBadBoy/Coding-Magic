@@ -1,0 +1,59 @@
+.game__container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-image: url('/src/images/dinosaur/game-background.png');
+  background-size: contain;
+}
+
+.dino {
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+  width: 60px;
+  background-image: url(/src/images/dinosaur/dino.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+
+.cactus {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/src/images/dinosaur/cactus.webp');
+  width: 30px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: moveObstacle 2s linear infinite;
+}
+
+@keyframes moveObstacle {
+  from {
+    right: -20px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+.jump {
+  animation: jump 0.5s ease-out;
+}
+
+@keyframes jump {
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -100px;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
