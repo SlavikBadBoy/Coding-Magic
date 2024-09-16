@@ -1,12 +1,10 @@
 .calculator {
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
-    padding-inline: 230px;
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  padding-inline: 230px;
+  margin: 0 auto;
   &__input {
     @extend %inputStyle;
     padding: 10px 20px;
