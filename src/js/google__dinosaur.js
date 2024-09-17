@@ -1,5 +1,11 @@
 class GoogleDinosaur {
   constructor() {
+    document.querySelector(
+      '.google-dinosaur'
+    ).innerHTML = `<div class="game__container">
+        <div class="dino"></div>
+        </div>
+        `;
     this.dino = document.querySelector('.dino');
     this.gameArea = document.querySelector('.game__container');
     this.gameOver = false;
@@ -105,12 +111,6 @@ class GoogleDinosaur {
   }
 }
 
-window.addEventListener('load', () => {
-  document.querySelector(
-    '.google-dinosaur'
-  ).innerHTML = `<div class="game__container">
-      <div class="dino"></div>
-      </div>
-      `;
+export const dinosaurInit = () => {
   new GoogleDinosaur();
-});
+};
