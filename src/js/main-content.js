@@ -1,10 +1,12 @@
 import games from './games';
 
-const main = document.querySelector('#main');
-
 const renderGames = (games, category) => {
-  main.innerHTML = games
-    .filter(game => category === 'all' || game.category.includes(category))
+  const main = document.querySelector('#main');
+  const filteredGames = games.filter(
+    game => category === 'all' || game.category.includes(category)
+  );
+
+  main.innerHTML = filteredGames
     .map(
       game =>
         `<section class='section'>
@@ -14,6 +16,12 @@ const renderGames = (games, category) => {
     </section>`
     )
     .join('');
+
+  filteredGames.forEach(element => {
+    if (element.init) {
+      element.init();
+    }
+  });
 };
 
 document.addEventListener('DOMContentLoaded', () => {
