@@ -27,8 +27,29 @@ export const biggestNubmerInit = () => {
   const biggestNumberInput = document.querySelectorAll(
     '[data-biggestnumber-input]'
   );
- biggestNumberInput.forEach(input => input.addEventListener("change", inputHandler) )  
- 
+  const inputHandler = () => {
+    const values = Array.from(biggestNumberInput).map(input => input.value);
+    let allFilled = true;
+    for (let i = 0; i < values.length; i++) {
+      if (values[i] === '') {
+        allFilled = false;
+        break;
+      }
+    }
+    if (allFilled) {
+      const maxNumber = Array.from(biggestNumberInput).reduce(
+        (max, input) => Math.max(max, Number(input.value) || 0),
+        0
+      );
+      biggestNumberText.textContent = `Найбільше число, яке ви ввели - ${maxNumber}`;
+    } else {
+      biggestNumberText.textContent = 'Будь ласка, введіть всі три числа.';
+    }
+  };
+
+  biggestNumberInput.forEach(input =>
+    input.addEventListener('change', inputHandler)
+  );
 };
 window.addEventListener('load', () => {
   biggestNubmerInit(); //Видалити
