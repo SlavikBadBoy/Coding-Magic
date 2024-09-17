@@ -140,10 +140,6 @@ class rockPaperScissors {
   }
 }
 
-window.addEventListener('load', () => {
+export const rockPaperScissorsInit = () => {
   new rockPaperScissors();
-});
-
-document.querySelector('.submenu').addEventListener('click', () => {
-  new rockPaperScissors();
-});
+};
