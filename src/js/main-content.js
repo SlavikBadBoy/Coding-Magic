@@ -2,20 +2,24 @@ import games from './games';
 
 const renderGames = (games, category) => {
   const main = document.querySelector('#main');
+
   const filteredGames = games.filter(
     game => category === 'all' || game.category.includes(category)
   );
 
-  main.innerHTML = filteredGames
+  main.innerHTML = filteredGames;
+  main
     .map(
       game =>
         `<section class='section'>
-      <div class="container">
-        <div class="game ${game.class}"></div>
-      </div>
-    </section>`
+    <div class="container ${game.class}__container game__container">
+      <div class="game ${game.class}"></div>
+    </div>
+  </section>`
     )
     .join('');
+
+  main.innerHTML = filteredGames;
 
   filteredGames.forEach(element => {
     if (element.init) {
@@ -29,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const submenu = document.querySelector('.submenu');
+
 const submenuHandler = event => {
   switch (event.target.dataset.category) {
     case 'numerical':
