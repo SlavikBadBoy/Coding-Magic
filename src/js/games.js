@@ -1,3 +1,6 @@
+// import { rockPaperScissorsInit } from '';
+// import { dinosaurInit } from './google__dinosaur';
+
 export default [
   {
     id: 1,
@@ -16,6 +19,7 @@ export default [
     name: 'Камінь-Ножиці-Папір',
     category: ['game', 'all'],
     class: 'rock-paper-scissors',
+    init: rockPaperScissorsInit,
   },
   {
     id: 4,
@@ -34,6 +38,7 @@ export default [
     name: 'Google динозаврик',
     category: ['game', 'all'],
     class: 'google-dinosaur',
+    init: dinosaurInit,
   },
   {
     id: 7,
