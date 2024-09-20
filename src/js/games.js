@@ -1,5 +1,5 @@
 // import { rockPaperScissorsInit } from '';
-import { dinosaurInit } from './google__dinosaur';
+// import { dinosaurInit } from './google__dinosaur';
 
 export default [
   {
