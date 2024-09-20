@@ -10,3 +10,12 @@ $colorFalse: #990000;
 // fonts
 $fontTextPrimary: 'Montserrat Alternates', sans-serif;
 $fontTextSecondary: 'Inter', sans-serif;
+
+[data-theme='dark'] {
+  $colorTextPrimary: #ffffff;
+  $colorTextSecondary: #444444;
+  $backgroundColorPrimary: #413e3e;
+  $backgroundColorSecondary: #d3d3d3;
+  $backgroundColorTertiary: #393939;
+  $colorButton: #000000;
+}
