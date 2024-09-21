@@ -27,6 +27,15 @@ label {
   max-width: 1090px;
   margin: 0 auto;
 }
+
+.game__container {
+  &::after {
+    content: '';
+    background-color: $colorTextPrimary;
+    height: 1px;
+    width: 536px;
+  }
+}
 @media (min-width: 1024px) {
 }
 @media (min-width: 768px) {
