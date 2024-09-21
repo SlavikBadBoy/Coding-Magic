@@ -20,7 +20,6 @@ const renderGames = (games, category) => {
     .join('');
 
   main.innerHTML = filteredGames;
-
   filteredGames.forEach(element => {
     if (element.init) {
       element.init();
