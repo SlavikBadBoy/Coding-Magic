@@ -61,3 +61,10 @@
     line-height: 170%;
   }
 }
+.scientist-one-card {
+  min-width: 100px;
+  min-height: 100px;
+  flex-basis: auto;
+  border-radius: 20px;
+  background: $backgroundColorFourth;
+}
