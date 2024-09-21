@@ -11,17 +11,17 @@
     color: white;
     padding: 30px;
     border-radius: 20px;
-    background-image: url('/src/images/rock-paper-scissors/scissors.svg');
+    background-image: url('../images/rock-paper-scissors/scissors.svg');
     background-repeat: no-repeat;
     background-size: 40px;
     background-position: center;
 
     &--paper {
-      background-image: url('/src/images/rock-paper-scissors/paper.svg');
+      background-image: url('../images/rock-paper-scissors/paper.svg');
     }
 
     &--rock {
-      background-image: url('/src/images/rock-paper-scissors/stone.svg');
+      background-image: url('../images/rock-paper-scissors/stone.svg');
     }
   }
 }
