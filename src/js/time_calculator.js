@@ -1,6 +1,6 @@
 export const timeCalculatorInit = () => {
   const timeCalculatorContainer = document.querySelector('.time-calculator');
-  time
+  timeCalculatorContainer.innerHTML = ``;
 };
 
 window.addEventListener('load', () => {
