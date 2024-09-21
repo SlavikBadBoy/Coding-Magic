@@ -147,6 +147,3 @@ export const scientistsInit = () => {
   };
   buttons.addEventListener('click', buttonHandler);
 };
-window.addEventListener('load', () => {
-  scientistsInit();
-});
