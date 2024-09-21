@@ -1,4 +1,4 @@
-import games from './games';
+import games from './data/games';
 
 const renderGames = (games, category) => {
   const main = document.querySelector('#main');
@@ -7,8 +7,7 @@ const renderGames = (games, category) => {
     game => category === 'all' || game.category.includes(category)
   );
 
-  main.innerHTML = filteredGames;
-  main
+  main.innerHTML = filteredGames
     .map(
       game =>
         `<section class='section'>
@@ -19,7 +18,6 @@ const renderGames = (games, category) => {
     )
     .join('');
 
-  main.innerHTML = filteredGames;
   filteredGames.forEach(element => {
     if (element.init) {
       element.init();
