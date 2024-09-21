@@ -73,192 +73,79 @@ export const scientistsInit = () => {
   const buttons = document.querySelector('[data-buttons]');
   const buttonHandler = event => {
     const action = event.target.dataset.action;
-    console.log(action);
-    if (action === 'born-in-19') {
-      const sortBy19 = () => {
-        const sortScientists = scientists.filter(
-          scientist => scientist.born > 1799 && scientist.born < 1900
-        );
-        scientistList.innerHTML = ` ${sortScientists
-          .map(
-            scientist => `
-     <li class="scientist__item">
-     <article class="scientist-card">
-          <div class="scientist-card__meta">
-            <p class="scientist-card__name">${scientist.name} ${scientist.surname}</p>
-            <p class="scientist-card__date">${scientist.born}-${scientist.dead}</p>
-          </div>
-        </article>
-      </li>`
-          )
-          .join('')}`;
-      };
-      console.log(sortBy19());
-    }
-    if (event.target.dataset.action === 'alphabit') {
-      alert('ifhbhbvfbhivwfbhi');
-      const sortByAlphabet = () => {
-        const sortScientists = scientist.sort(function (first, second) {
-          return first.name.localeCompare(second.name);
-        });
-        scientistList.innerHTML = ` ${sortScientists
-          .map(
-            scientist => `
-     <li class="scientist__item">
-     <article class="scientist-card">
-          <div class="scientist-card__meta">
-            <p class="scientist-card__name">${scientist.name} ${scientist.surname}</p>
-            <p class="scientist-card__date">${scientist.born}-${scientist.dead}</p>
-          </div>
-        </article>
-      </li>`
-          )
-          .join('')}`;
-      };
-      console.log(sortByAlphabet());
-    }
-    if (event.target.dataset.action === 'born-last') {
-      const bornLast = () => {
-        const sortByBorn = (befor, after) => after.born - befor.born;
-        const sortScientists = scientists.sort(sortByBorn)[0];
-        scientistList.innerHTML = `
-     <li class=".scientist-one-card">
-     <article class="scientist-card">
-          <div class="scientist-card__meta">
-            <p class="scientist-card__name">${sortScientists.name} ${sortScientists.surname}</p>
-            <p class="scientist-card__date">${sortScientists.born}-${sortScientists.dead}</p>
-          </div>
-        </article>
-      </li>`;
-      };
-      console.log(bornLast());
-    }
-    if (event.target.dataset.action === 'albert-einshtein') {
-      const findAlbert = () => {
-        const sortScientists = scientists.find(
-          scientist =>
-            scientist.name === 'Albert' && scientist.surname === 'Einstein'
-        );
-        scientistList.innerHTML = ` ${sortScientists.map(
+    const renderScientist = array => {
+      scientistList.innerHTML = ` ${array
+        .map(
           scientist => `
-     <li class="scientist__item">
-     <article class="scientist-card">
-          <div class="scientist-card__meta">
-            <p class="scientist-card__name">${scientist.name} ${scientist.surname}</p>
-            <p class="scientist-card__date">${scientist.born}-${scientist.dead}</p>
-          </div>
-        </article>
-      </li>`
-        )}`;
-      };
-      console.log(findAlbert());
+   <li class="scientist__item">
+   <article class="scientist-card">
+        <div class="scientist-card__meta">
+          <p class="scientist-card__name">${scientist.name} ${scientist.surname}</p>
+          <p class="scientist-card__date">${scientist.born}-${scientist.dead}</p>
+        </div>
+      </article>
+    </li>`
+        )
+        .join('')}`;
+    };
+    if (action === 'born-in-19') {
+      const sortScientists = scientists.filter(
+        scientist => scientist.born > 1799 && scientist.born < 1900
+      );
+      renderScientist(sortScientists);
     }
-    if (event.target.dataset.action === 'start-c') {
-      const surnameStartC = () => {
-        const sortScientists = scientists.filter(scientist =>
-          scientist.surname.startsWith('C')
-        );
-        scientistList.innerHTML = ` ${sortScientists
-          .map(
-            scientist => `
-     <li class="scientist__item">
-     <article class="scientist-card">
-          <div class="scientist-card__meta">
-            <p class="scientist-card__name">${scientist.name} ${scientist.surname}</p>
-            <p class="scientist-card__date">${scientist.born}-${scientist.dead}</p>
-          </div>
-        </article>
-      </li>`
-          )
-          .join('')}`;
-      };
-      console.log(surnameStartC());
+    if (action === 'alphabit') {
+      const sortScientists = scientists.sort(function (first, second) {
+        return first.name.localeCompare(second.name);
+      });
+      renderScientist(sortScientists);
     }
-    if (event.target.dataset.action === 'start-a') {
-      const nameStartA = () => {
-        const sortScientists = scientists.filter(scientist =>
-          scientist.name.startsWith('A')
-        );
-        scientistList.innerHTML = ` ${sortScientists
-          .map(
-            scientist => `
-     <li class="scientist__item">
-     <article class="scientist-card">
-          <div class="scientist-card__meta">
-            <p class="scientist-card__name">${scientist.name} ${scientist.surname}</p>
-            <p class="scientist-card__date">${scientist.born}-${scientist.dead}</p>
-          </div>
-        </article>
-      </li>`
-          )
-          .join('')}`;
-      };
-      console.log(nameStartA());
+    if (action === 'lifetime') {
+      const sortScientists = scientists.sort(function (first, second) {
+        return second.dead - second.born - (first.dead - first.born);
+      });
+      renderScientist(sortScientists);
     }
-    if (event.target.dataset.action === 'similar') {
-      const similarLetter = () => {
-        const sortScientists = scientists.filter(
-          scientist => scientist.name.charAt(0) === scientist.surname.charAt(0)
-        );
-        scientistList.innerHTML = ` ${sortScientists
-          .map(
-            scientist => `
-     <li class="scientist__item">
-     <article class="scientist-card">
-          <div class="scientist-card__meta">
-            <p class="scientist-card__name">${scientist.name} ${scientist.surname}</p>
-            <p class="scientist-card__date">${scientist.born}-${scientist.dead}</p>
-          </div>
-        </article>
-      </li>`
-          )
-          .join('')}`;
-      };
-      console.log(similarLetter());
+    if (action === 'born-last') {
+      const sortByBorn = (befor, after) => after.born - befor.born;
+      const scientist = scientists.sort(sortByBorn)[0];
+      const sortScientists = [scientist];
+      renderScientist(sortScientists);
+    }
+    if (action === 'albert-einshtein') {
+      const sortScientists = scientists.filter(
+        scientist =>
+          scientist.name === 'Albert' && scientist.surname === 'Einstein'
+      );
+      renderScientist(sortScientists);
+    }
+    if (action === 'start-c') {
+      const sortScientists = scientists.filter(scientist =>
+        scientist.surname.startsWith('C')
+      );
+      renderScientist(sortScientists);
+    }
+    if (action === 'start-a') {
+      const sortScientists = scientists.filter(scientist =>
+        scientist.name.startsWith('A')
+      );
+      renderScientist(sortScientists);
+    }
+    if (action === 'lucky-and-unlucky') {
+      const allScientists = scientists.sort(function (first, second) {
+        return second.dead - second.born - (first.dead - first.born);
+      });
+      const sortScientists = [allScientists[0], allScientists[11]];
+      renderScientist(sortScientists);
+    }
+    if (action === 'similar') {
+      const sortScientists = scientists.filter(
+        scientist => scientist.name.charAt(0) === scientist.surname.charAt(0)
+      );
+      renderScientist(sortScientists);
     }
   };
   buttons.addEventListener('click', buttonHandler);
-  //!!!!!!!!!!!!!!!!
-  // const sortByAlphabet = () => {
-  //   const sort = (prev, after) => {
-  //     prev.name.localeCompare(after.name);
-  //   };
-  //   return console.log(scientists.sort(sort));
-  // };
-  // console.log(sortByAlphabet());
-  //!!!!!!!!!!!!!!!!!!!!!!!!
-  // const sortByLifetime = () => {
-  //   const sortLifetime = (even, after) => ;
-  //   return scientists.sort(sortByLifetime);
-  // };
-  // console.log(sortByLifetime());
-  // const bornAlbert = () => {
-  //   return scientists.find(
-  //     scientist =>
-  //       scientist.name === 'Albert' && scientist.surname === 'Einstein'
-  //   );
-  // };
-  // console.log(bornAlbert());
-  //
-  // const surnameStartByC = () => {
-  //   return scientists.filter(scientist => scientist.surname.startsWith('C'));
-  // };
-  // console.log(surnameStartByC());
-  // const nameStartByA = () => {
-  //   return scientists.filter(scientist => scientist.name.startsWith('A'));
-  // };
-  // console.log(nameStartByA());
-  //!!!!!!!!!!!!!!!!!
-  // const luckyAndUnlucky = () => {
-  //   return scientists.filter(scientist => scientist.name.startsWith('A'));
-  // };
-  // console.log(nameStartByA());
-  //   const similarLetter = () => {
-  //     return scientists.filter(
-  //       scientist => scientist.name.charAt(0) === scientist.surname.charAt(0)
-  //     );
-  //   };
-  //   console.log(similarLetter());
 };
 window.addEventListener('load', () => {
   scientistsInit();

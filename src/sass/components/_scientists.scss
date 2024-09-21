@@ -46,9 +46,11 @@
   }
   &__item {
     border-radius: 20px;
-    height: 100px;
+    min-height: 100px;
+    padding: 36.4px 0px 36.4px 0px;
     background: $backgroundColorFourth;
     flex-basis: calc((100% - 177px) / 4);
+    min-width: 100px;
   }
 }
 .scientist-card {
