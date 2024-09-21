@@ -1,5 +1,5 @@
 import { rockPaperScissorsInit } from '../rock-paper-scissors.js';
-// import { dinosaurInit } from './google__dinosaur';
+import { dinosaurInit } from '../google__dinosaur.js';
 
 export default [
   {
@@ -38,7 +38,7 @@ export default [
     name: 'Google динозаврик',
     category: ['game', 'all'],
     class: 'google-dinosaur',
-    // init: dinosaurInit,
+    init: dinosaurInit,
   },
   {
     id: 7,

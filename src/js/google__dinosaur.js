@@ -2,12 +2,12 @@ class GoogleDinosaur {
   constructor() {
     document.querySelector(
       '.google-dinosaur'
-    ).innerHTML = `<div class="game__container">
+    ).innerHTML = `<div class="game__container--dino">
         <div class="dino"></div>
         </div>
         `;
     this.dino = document.querySelector('.dino');
-    this.gameArea = document.querySelector('.game__container');
+    this.gameArea = document.querySelector('.game__container--dino');
     this.gameOver = false;
     this.isJumping = false;
     this.init();
