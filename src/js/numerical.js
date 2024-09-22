@@ -16,7 +16,7 @@ export const numericalInit = () => {
 <button type='button' class="button__numerical" id="checkNumber"></button>
 </form>
 
-<p class="result__numerical" id="result">вгадай число</p>
+<p class="result__numerical" id="result">Щоб почати гру, напишіть будь яке число від 1 до 10!</p>
 `;
 
   const number = document.querySelector('#number');
