@@ -1,4 +1,10 @@
 export const numericalInit = () => {
+  const title = document.querySelector('.guess-number__container');
+  const createTitle = document.createElement('h2');
+
+  createTitle.classList.add('title__numerical');
+  createTitle.textContent = 'Вгадай число, яке загадав комп’ютер';
+  title.prepend(createTitle);
   const numerical = document.querySelector('.guess-number');
   numerical.innerHTML = `<form action="#" class="form__numerical">
 <input
@@ -10,7 +16,7 @@ export const numericalInit = () => {
 <button type='button' class="button__numerical" id="checkNumber"></button>
 </form>
 
-<p class="result__numerical" id="result"></p>
+<p class="result__numerical" id="result">вгадай число</p>
 `;
 
   const number = document.querySelector('#number');
@@ -26,7 +32,7 @@ export const numericalInit = () => {
       result.innerHTML = `Вітаю, ви вгадали число! ${randomNumber}`;
       result.style.color = 'green';
     } else if (userGuess < randomNumber) {
-      result.innerHTML = 'Ви не вгадали';
+      result.innerHTML = `Ви не вгадали, чило ${randomNumber}`;
       result.style.color = 'red';
     }
     randomNumber = Math.floor(Math.random() * 10) + 1;
