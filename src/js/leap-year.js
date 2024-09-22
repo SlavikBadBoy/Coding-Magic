@@ -14,7 +14,7 @@ placeholder="Введіть рік народження"
   const calculatorYear = document.querySelector('#year');
   const result = document.querySelector('#result');
   const button = document.querySelector('#checkYearButton');
-  button.addEventListener('click', checkCalculatorYear);
+
   const checkCalculatorYear = () => {
     const year = parseInt(calculatorYear.value);
     if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
@@ -25,4 +25,5 @@ placeholder="Введіть рік народження"
       result.style.color = 'red';
     }
   };
+  button.addEventListener('click', checkCalculatorYear);
 };
