@@ -1,0 +1,67 @@
+.our-team {
+  position: relative;
+}
+
+.team-slider {
+  position: relative;
+}
+.title__our-team {
+  text-align: center;
+  font-size: 2em;
+}
+.team-list {
+  display: flex;
+  transform: translatex(0);
+  transition: transform 1s ease;
+  margin-bottom: 10px;
+}
+.team-item {
+  min-width: 100%;
+}
+.left-button {
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  background-image: url(/src/images/our-tamate/left.svg);
+  width: 50px;
+  height: 100px;
+}
+.right-button {
+  position: absolute;
+  top: 50%;
+  left: 1000px;
+  background-image: url(/src/images/our-tamate/right.svg);
+  width: 50px;
+  height: 100px;
+}
+
+.name__teammate {
+  width: 115px;
+  height: 17px;
+  padding: 20px;
+}
+.info__teammate {
+  width: 315px;
+  height: 15px;
+}
+.footo__teamate {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 20px;
+}
+.pagination {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.dot {
+  width: 40px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #bbb;
+  cursor: pointer;
+}
+.dot.active {
+  background-color: #717171;
+}
