@@ -7,7 +7,7 @@ export const numericalInit = () => {
   id="number"
   placeholder="Введіть число"
 />
-<button class="button__numerical" id="checkNumber"></button>
+<button type='button' class="button__numerical" id="checkNumber"></button>
 </form>
 
 <p class="result__numerical" id="result"></p>
@@ -16,7 +16,6 @@ export const numericalInit = () => {
   const number = document.querySelector('#number');
   const buttonCheckNumber = document.querySelector('#checkNumber');
   const result = document.querySelector('#result');
-  buttonCheckNumber.addEventListener('click', checkNumber);
 
   let randomNumber = Math.floor(Math.random() * 10) + 1;
 
@@ -34,6 +33,3 @@ export const numericalInit = () => {
   };
   buttonCheckNumber.addEventListener('click', checkNumber);
 };
-window.addEventListener('load', () => {
-  numericalInit();
-});
