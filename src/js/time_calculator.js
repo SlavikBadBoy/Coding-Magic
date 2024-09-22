@@ -7,7 +7,7 @@ export const timeCalculatorInit = () => {
     <div class="time-calculator__form"><input class="time-calculator__input" type="number" placeholder="Введіть число" id="timeCalculatorInput"/>
       <button class="time-calculator__button" id="timeCalculatorBtn"></button></div>
       
-      <p class="time-calculator_result" id="timeCalculatorResult">3 дн. 15:45:01</p>
+      <p class="time-calculator_result" id="timeCalculatorResult">Відповідь</p>
     </div>
   </div>
 </section>`;
@@ -15,9 +15,25 @@ export const timeCalculatorInit = () => {
   const timeCalculatorInput = document.querySelector('#timeCalculatorInput');
   const timeCalculatorBtn = document.querySelector('#timeCalculatorBtn');
   const timeCalculatorResult = document.querySelector('#timeCalculatorResult');
-  timeCalculatorBtn.addEventListener('click', () => {
-    const minutes = 'шоб вс код не ругався';
-  });
+  const convertMinutes = () => {
+    const summaryTime = parseFloat(timeCalculatorInput.value);
+    const numberHours = summaryTime / 60;
+    const days = Math.floor(numberHours / 24);
+    const hours = Math.floor(numberHours % 24);
+    const minutes = Math.floor(summaryTime % 60);
+
+    // const seconds =>
+    // if (minutes > 60) {
+    //   minutes % 60
+    // }
+    let seconds = (summaryTime - Math.floor(summaryTime)) * 10;
+    if (minutes > 60) {
+      seconds = minutes % 60;
+    }
+    console.log(days, hours, minutes);
+    timeCalculatorResult.textContent = `${days} дн. ${hours}:${minutes}:${seconds}`;
+  };
+  timeCalculatorBtn.addEventListener('click', convertMinutes);
 };
 
 window.addEventListener('load', () => {
