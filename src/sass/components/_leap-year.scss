@@ -2,42 +2,41 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 149px;
+
   position: relative;
-  border-right-style: 50px;
-  padding: 92px 257px;
+}
+.title__leap-year {
+  text-align: center;
+  padding: 36px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: calc(19.5px);
 }
 .form__check-year {
   display: flex;
-  box-shadow: 3px 3px 0px 0px #00000040;
+  box-shadow: 3px 3px 0px 0px $colorTextPrimary;
   border-radius: 20px;
 }
 .input__check-year {
-  width: Hug (35px);
-  height: Hug (35px);
-  top: 273px;
-  left: 432px;
-  gap: 10px;
+  width: 160px;
+  height: 35px;
 
   border-radius: 20px 0px 0px 20px;
-  background-color: #d7d7d7;
+  background-color: $backgroundColorTertiary;
 }
 .button__check-year {
   width: 35px;
   height: 35px;
-  top: 73px;
-  left: 612px;
+
   padding-top: 10pxx;
   gap: 10px;
   border-radius: 0px 20px 20px 0px;
-  background-color: black;
+  background-color: $colorTextPrimary;
   background-image: url(/src/images/search.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 .result__check-year {
-  top: 283px;
-  left: 796px;
   font-size: 15px;
   font-weight: 400;
   line-height: 14.63px;
