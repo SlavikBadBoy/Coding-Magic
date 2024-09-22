@@ -32,4 +32,8 @@ export const numericalInit = () => {
     }
     randomNumber = Math.floor(Math.random() * 10) + 1;
   };
+  buttonCheckNumber.addEventListener('click', checkNumber);
 };
+window.addEventListener('load', () => {
+  numericalInit();
+});

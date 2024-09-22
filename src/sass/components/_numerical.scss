@@ -11,11 +11,11 @@
 .form__numerical {
   display: flex;
   box-shadow: 3px 3px 0px 0px #00000040;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
 }
 .input__numerical {
-  width: Hug (150px) px;
-  height: Hug (35px) px;
+  width: 150px;
+  height: 35px;
   top: 436px;
   left: 432px;
   padding: 10px 45px 10px 10px;
@@ -30,7 +30,7 @@
   height: 35px;
   top: 73px;
   left: 612px;
-  padding: 10px 0px 0px 0px;
+  padding-top: 10px;
   gap: 10px;
   border-radius: 0px 20px 20px 0px;
   background-color: black;
