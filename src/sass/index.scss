@@ -1,7 +1,10 @@
-@import './global/reset';
-@import './utils/variables';
+@import 'global/reset';
+@import 'utils/variables';
+@import 'global/common';
+@import 'global/global';
 @import './utils/placeholders';
-@import './global/global';
-@import './global/common';
 @import './components/calculator.scss';
+@import './components/header';
+@import './components/google-dinosaur';
+@import './components/rock-paper-scissors';
 @import './components/leap-year.scss';

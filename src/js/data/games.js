@@ -1,62 +1,67 @@
+import { rockPaperScissorsInit } from '../rock-paper-scissors.js';
+import { dinosaurInit } from '../google__dinosaur.js';
+
 export default [
   {
     id: 1,
     name: 'Високосний калькулятор',
-    category: 'numerical',
+    category: ['numerical', 'all'],
     class: 'calculator-year',
   },
   {
     id: 2,
     name: 'Вгадай число',
-    category: 'numerical',
+    category: ['numerical', 'all'],
     class: 'guess-number',
   },
   {
     id: 3,
     name: 'Камінь-Ножиці-Папір',
-    category: 'game',
+    category: ['game', 'all'],
     class: 'rock-paper-scissors',
+    init: rockPaperScissorsInit,
   },
   {
     id: 4,
     name: 'Калькулятор',
-    category: 'numerical',
+    category: ['numerical', 'all'],
     class: 'calculator',
   },
   {
     id: 5,
     name: 'Калькулятор часу',
-    category: 'numerical',
+    category: ['numerical', 'all'],
     class: 'time-calculator',
   },
   {
     id: 6,
     name: 'Google динозаврик',
-    category: 'game',
+    category: ['game', 'all'],
     class: 'google-dinosaur',
+    init: dinosaurInit,
   },
   {
     id: 7,
     name: 'Футбол',
-    category: 'game',
+    category: ['game', 'all'],
     class: 'soccer',
   },
   {
     id: 8,
     name: 'Найбільше число',
-    category: 'numerical',
+    category: ['numerical', 'all'],
     class: 'biggest-number',
   },
   {
     id: 9,
     name: 'Наша команда',
-    category: 'acquaintance',
+    category: ['acquaintance', 'all'],
     class: 'our-team',
   },
   {
     id: 10,
     name: 'Вчений',
-    category: 'acquaintance',
+    category: ['acquaintance', 'all'],
     class: 'scientist',
   },
 ];
