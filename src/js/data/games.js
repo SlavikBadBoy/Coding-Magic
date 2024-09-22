@@ -1,12 +1,13 @@
 import { rockPaperScissorsInit } from '../rock-paper-scissors.js';
 import { dinosaurInit } from '../google__dinosaur.js';
-
+import { calculatorYearInit } from '../leap-year.js'
 export default [
   {
     id: 1,
     name: 'Високосний калькулятор',
     category: ['numerical', 'all'],
     class: 'calculator-year',
+    init: calculatorYearInit,
   },
   {
     id: 2,
