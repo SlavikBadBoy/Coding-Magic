@@ -37,6 +37,19 @@ export const ourTeamInit = () => {
   }
   let indexs = 0;
   const dots = document.querySelector('.dot');
+  function updateSlider() {
+    slider.style.transbform = `translateX(${-indexs * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[indexs].classList.add('active');
+  }
+  document.querySelector('.right-button').addEventListener('click', () => {
+    indexs = (indexs + 1) % slidesCount;
+    updateSlider();
+  });
+  document.querySelector('.left-button').addEventListener('click', () => {
+    indexs = (indexs - 1) % slidesCount;
+    updateSlider();
+  });
 };
 window.addEventListener('load', () => {
   ourTeamInit();
