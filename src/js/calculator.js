@@ -33,7 +33,6 @@ export const calculatorInit = () => {
   const firstNumber = document.querySelector('#calculator-first-number');
   const secondNumber = document.querySelector('#calculator-second-number');
   const result = document.querySelector('#calculator-result');
-  const action = document.querySelector('[data-action]');
   const actions = document.querySelector('[data-actions]');
   const equals = document.querySelector('#operator-equals');
   let operator = '';
