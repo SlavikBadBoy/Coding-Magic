@@ -1,7 +1,8 @@
 import { rockPaperScissorsInit } from '../rock-paper-scissors.js';
 import { dinosaurInit } from '../google__dinosaur.js';
-import { calculatorYearInit } from '../leap-year.js'
+import { calculatorYearInit } from '../leap-year.js';
 import { numericalInit } from '../numerical.js';
+import { soccerInit } from '../soccer.js';
 export default [
   {
     id: 1,
@@ -48,6 +49,7 @@ export default [
     name: 'Футбол',
     category: ['game', 'all'],
     class: 'soccer',
+    init: soccerInit,
   },
   {
     id: 8,
