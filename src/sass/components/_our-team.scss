@@ -8,13 +8,15 @@
 .title__our-team {
   text-align: center;
   font-size: 2em;
+  margin-bottom: 36px;
 }
 .team-list {
   display: flex;
-
+  text-align: center;
   transform: translatex(0%);
   transition: transform 1s ease;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
+  gap: 20px;
 }
 .team-item {
   min-width: 100%;
@@ -22,7 +24,7 @@
 .left-button {
   position: absolute;
   top: 50%;
-  left: -100px;
+  left: -50px;
   background-image: url(/src/images/our-tamate/left.svg);
   width: 50px;
   height: 100px;
@@ -30,7 +32,7 @@
 .right-button {
   position: absolute;
   top: 50%;
-  right: -100px;
+  right: -50px;
   background-image: url(/src/images/our-tamate/right.svg);
   width: 50px;
   height: 100px;
@@ -58,8 +60,8 @@
 }
 .dot {
   width: 40px;
-  height: 10px;
-  border-radius: 20px;
+  height: 5px;
+  border-radius: 30px;
   background-color: #bbb;
   cursor: pointer;
 }
