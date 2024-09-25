@@ -22,7 +22,6 @@ export const biggestNubmerInit = () => {
       />
     </div>
     <p data-biggestnubmer-text class="maximum__text">Найбільше число, яке ви ввели - </p>`;
-  // console.log(biggestNumberContainer);
   const biggestNumberText = document.querySelector('[data-biggestnubmer-text]');
   const biggestNumberInput = document.querySelectorAll(
     '[data-biggestnumber-input]'
@@ -42,8 +41,6 @@ export const biggestNubmerInit = () => {
         0
       );
       biggestNumberText.textContent = `Найбільше число, яке ви ввели - ${maxNumber}`;
-    } else {
-      biggestNumberText.textContent = 'Будь ласка, введіть всі три числа.';
     }
   };
 
@@ -51,6 +48,3 @@ export const biggestNubmerInit = () => {
     input.addEventListener('change', inputHandler)
   );
 };
-window.addEventListener('load', () => {
-  biggestNubmerInit(); //Видалити
-});
