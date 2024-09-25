@@ -1,5 +1,4 @@
 .footer {
-  padding: 60px 0;
   &__container {
     display: flex;
     align-items: center;
@@ -29,7 +28,6 @@
     border-radius: 20px;
     padding: 10px 80px 10px 10px;
     max-width: 204px;
-    @extend %inputStyle;
   }
   &__button {
     @extend %buttonStyle;

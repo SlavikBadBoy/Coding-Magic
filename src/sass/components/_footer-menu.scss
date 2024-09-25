@@ -2,7 +2,6 @@
   &__container {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 463px;
     height: 245px;
     position: relative;
@@ -17,7 +16,8 @@
     font-size: 20px;
     text-align: center;
     color: $colorTextPrimary;
-    margin-bottom: 55px;
+    padding-top: 83px;
+    font-weight: 400;
   }
   &__close {
     position: absolute;

@@ -32,6 +32,10 @@ label {
   max-width: 1090px;
   margin: 0 auto;
 }
+input {
+  color: $colorTextSecondary;
+  background-color: $backgroundColorPrimary;
+}
 @media (min-width: 1024px) {
 }
 @media (min-width: 768px) {
