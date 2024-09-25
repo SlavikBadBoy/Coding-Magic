@@ -5,10 +5,15 @@
     width: 463px;
     height: 245px;
     position: relative;
-    background-image: url(/src/images/footer/footer-background.jpg);
+    background-image: url(/src/images/greeting-modal/sword.svg),
+      url('/src/images/greeting-modal/puzzle.svg'),
+      url('/src/images/greeting-modal/tic-tac-toe.svg'),
+      url(/src/images/greeting-modal/game-development.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: 30px;
+    background-position-x: 10%, 20%, 80%, 90%;
+    background-position-y: 36%, 64%, 64%, 36%;
+    background-color: $colorButton;
     border-radius: 20px;
   }
   &__title {
