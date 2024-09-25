@@ -1,6 +1,7 @@
 import { rockPaperScissorsInit } from '../rock-paper-scissors.js';
 import { dinosaurInit } from '../google__dinosaur.js';
 import { calculatorYearInit } from '../leap-year.js'
+import { numericalInit } from '../numerical.js';
 export default [
   {
     id: 1,
@@ -14,6 +15,7 @@ export default [
     name: 'Вгадай число',
     category: ['numerical', 'all'],
     class: 'guess-number',
+    init: numericalInit,
   },
   {
     id: 3,
