@@ -14,13 +14,13 @@
 }
 .form__check-year {
   display: flex;
-  box-shadow: 3px 3px 0px 0px $colorTextPrimary;
+  box-shadow: 3px 3px 0px 0px $shadow;
   border-radius: 20px;
 }
 .input__check-year {
-  width: 160px;
+  width: 180px;
   height: 35px;
-
+  padding: 10px;
   border-radius: 20px 0px 0px 20px;
   background-color: $backgroundColorTertiary;
 }
@@ -28,7 +28,7 @@
   width: 35px;
   height: 35px;
 
-  padding-top: 10pxx;
+  padding-top: 10px;
   gap: 10px;
   border-radius: 0px 20px 20px 0px;
   background-color: $colorTextPrimary;

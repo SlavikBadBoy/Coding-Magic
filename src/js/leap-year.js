@@ -21,7 +21,15 @@ placeholder="Введіть рік народження"
   const result = document.querySelector('#result');
   const button = document.querySelector('#checkYearButton');
 
-  const checkCalculatorYear = () => {
+  const checkCalculatorYear = (event) => {
+    event.preventDefault(); 
+    
+    const yearValue = calculatorYear.value.trim(); 
+
+    if (yearValue.length === 0) {
+      result.innerHTML = 'Введіть ваш рік!';
+      result.style.color = 'red';
+    }
     const year = parseInt(calculatorYear.value);
     if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
       result.innerHTML = 'Ви народилися у високосний рік!';
@@ -30,6 +38,8 @@ placeholder="Введіть рік народження"
       result.innerHTML = 'Ви народилися не в високосний рік.';
       result.style.color = 'red';
     }
+
+    
   };
   button.addEventListener('click', checkCalculatorYear);
 };
