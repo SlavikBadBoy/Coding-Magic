@@ -9,7 +9,7 @@ export const timeCalculatorInit = () => {
       <input class="time-calculator__input" type="number" placeholder="Введіть число" id="timeCalculatorInput"/>
       <button class="time-calculator__button" id="timeCalculatorBtn"></button>
     </div>
-      <p class="time-calculator_result" id="timeCalculatorResult"></p>
+      <p class="time-calculator_result" id="timeCalculatorResult">0 дн. 0:0</p>
     </div>
   </div>
 </section>`;
@@ -28,5 +28,3 @@ export const timeCalculatorInit = () => {
   };
   timeCalculatorBtn.addEventListener('click', convertMinutes);
 };
-
-
