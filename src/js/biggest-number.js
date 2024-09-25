@@ -29,7 +29,7 @@ export const biggestNubmerInit = () => {
   const inputHandler = () => {
     const values = Array.from(biggestNumberInput).map(input => input.value);
     let allFilled = true;
-    for (let i = 0; i < values.length; i++) {
+    for (let i = 0; i < values.length; i += 1) {
       if (values[i] === '') {
         allFilled = false;
         break;
