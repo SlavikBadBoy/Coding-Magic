@@ -11,7 +11,7 @@ export const ourTeamInit = () => {
           .map(
             teammate =>
               `<li class="team-item">
-                    <article>
+                    <article class ='teammate__article'>
                         <picture class="footo__teamate">${teammate.foto}</picture>
                         <p class="name__teammate">${teammate.name}</p>
                         <p class="info__teammate">${teammate.temmeteInfo}</p>
@@ -36,9 +36,9 @@ export const ourTeamInit = () => {
     paginetion.appendChild(dot);
   }
   let indexs = 0;
-  const dots = document.querySelector('.dot');
+  const dots = document.querySelectorAll('.dot');
   function updateSlider() {
-    slider.style.transbform = `translateX(${-indexs * 100}%)`;
+    slider.style.transform = `translateX(${-indexs * 100}%)`;
     dots.forEach(dot => dot.classList.remove('active'));
     dots[indexs].classList.add('active');
   }
@@ -48,7 +48,17 @@ export const ourTeamInit = () => {
   });
   document.querySelector('.left-button').addEventListener('click', () => {
     indexs = (indexs - 1) % slidesCount;
+    if (indexs < 0) {
+      indexs = 3;
+    }
     updateSlider();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      indexs = index;
+      updateSlider();
+    });
   });
 };
 window.addEventListener('load', () => {
