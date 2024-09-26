@@ -1,0 +1,103 @@
+.game__container--dino {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-image: url('/src/images/dinosaur/game-background.png');
+  height: 300px;
+  background-size: contain;
+  background-color: transparent;
+  background-size: cover;
+  background-position-x: 70%;
+}
+
+.dino {
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+  width: 60px;
+  background-image: url(/src/images/dinosaur/dino.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+
+.cactus {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/src/images/dinosaur/cactus.webp');
+  width: 30px;
+  height: 60px;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  animation: moveObstacle 2s linear infinite;
+}
+
+.google-dinosaur {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.dinosaur {
+  &__modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $modalDinosaur;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+  }
+
+  &__lose {
+    font-size: 18px;
+  }
+  &__restart {
+    border: 1px solid $backgroundColorSecondary;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: transform 250ms ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.dinosaur__modal.show {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+@keyframes moveObstacle {
+  from {
+    right: -20px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+.jump {
+  animation: jump 0.5s ease-out;
+}
+
+@keyframes jump {
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -100px;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}

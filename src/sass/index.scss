@@ -3,6 +3,13 @@
 @import 'global/common';
 @import 'global/global';
 @import './utils/placeholders';
-@import './components/calculator.scss';
+@import './components/calculator';
 @import './components/header';
 @import './components/greeting-modal';
+@import './components/footer';
+@import './components/footer-menu';
+@import './components/scientists';
+@import './components/google-dinosaur';
+@import './components/rock-paper-scissors';
+@import './components/leap-year.scss';
+@import './components/numerical.scss';
