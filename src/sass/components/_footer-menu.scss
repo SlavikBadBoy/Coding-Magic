@@ -1,0 +1,45 @@
+.footer-menu {
+  &__container {
+    display: flex;
+    justify-content: center;
+    width: 463px;
+    height: 245px;
+    position: relative;
+    background-image: url(/src/images/greeting-modal/sword.svg),
+      url('/src/images/greeting-modal/puzzle.svg'),
+      url('/src/images/greeting-modal/tic-tac-toe.svg'),
+      url(/src/images/greeting-modal/game-development.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: 10%, 20%, 80%, 90%;
+    background-position-y: 36%, 64%, 64%, 36%;
+    background-color: $colorButton;
+    border-radius: 20px;
+  }
+  &__title {
+    font-family: $fontTextSecondary;
+    font-size: 20px;
+    text-align: center;
+    color: $colorTextPrimary;
+    padding-top: 83px;
+    font-weight: 400;
+  }
+  &__close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+}
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.444);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  animation: backdrop-animation 0.2s ease-in-out both;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

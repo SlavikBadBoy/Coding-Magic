@@ -1,0 +1,19 @@
+.biggest-number {
+  text-align: center;
+}
+
+.maximum__inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+  gap: 38px;
+}
+.maximum__input {
+  max-width: 135px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: $backgroundColorPrimary;
+  color: $colorTextSecondary;
+  box-shadow: 3px 3px 0 0 $shadow;
+}
