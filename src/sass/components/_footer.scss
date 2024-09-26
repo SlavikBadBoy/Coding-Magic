@@ -1,4 +1,5 @@
 .footer {
+  background-color: var(--color-button);
   &__container {
     display: flex;
     align-items: center;
@@ -40,4 +41,9 @@
     left: 0;
     font-size: 6px;
   }
+}
+
+html[data-theme='dark'] .footer__logo {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(129deg) brightness(106%) contrast(101%);
 }

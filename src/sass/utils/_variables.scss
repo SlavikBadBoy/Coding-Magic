@@ -1,4 +1,4 @@
-// colors
+// Змінні для світлої теми
 $colorTextPrimary: #000000;
 $colorTextSecondary: #7e7e7e;
 $backgroundColorPrimary: #d7d7d7;
@@ -20,11 +20,61 @@ $backgroundDot: #717171;
 $fontTextPrimary: 'Montserrat Alternates', sans-serif;
 $fontTextSecondary: 'Inter', sans-serif;
 
+// Змінні для темної теми
+$colorTextPrimary-dark: #ffffff;
+$colorTextSecondary-dark: #444444;
+$backgroundColorPrimary-dark: #413e3e;
+$backgroundColorSecondary-dark: #d3d3d3;
+$backgroundColorFourth-dark: #2c2c2c;
+$backgroundColorTertiary-dark: #393939;
+$backgroundColorChosenScientist-dark: #323232;
+$colorButton-dark: #2a2a2a;
+$colorTrue-dark: #00ff00;
+$colorFalse-dark: #ff0000;
+$colorBackdrop-dark: #000000d1;
+$modalDinosaur-dark: #505050b7;
+$shadow-dark: rgba(255, 255, 255, 0.15);
+$soccerField-dark: #4a9147;
+$mainBackground-dark: #2a2a2a;
+$colorDot-dark: #888;
+$backgroundDot-dark: #555;
+
+:root {
+  --color-text-primary: #{$colorTextPrimary};
+  --color-text-secondary: #{$colorTextSecondary};
+  --background-color-primary: #{$backgroundColorPrimary};
+  --background-color-secondary: #{$backgroundColorSecondary};
+  --background-color-tertiary: #{$backgroundColorTertiary};
+  --background-color-fourth: #{$backgroundColorFourth};
+  --background-color-chosen-scientist: #{$backgroundColorChosenScientist};
+  --color-button: #{$colorButton};
+  --color-true: #{$colorTrue};
+  --color-false: #{$colorFalse};
+  --color-backdrop: #{$colorBackdrop};
+  --modal-dinosaur: #{$modalDinosaur};
+  --shadow: #{$shadow};
+  --soccer-field: #{$soccerField};
+  --main-background: #{$mainBackground};
+  --color-dot: #{$colorDot};
+  --background-dot: #{$backgroundDot};
+}
+
 [data-theme='dark'] {
-  $colorTextPrimary: #ffffff;
-  $colorTextSecondary: #444444;
-  $backgroundColorPrimary: #413e3e;
-  $backgroundColorSecondary: #d3d3d3;
-  $backgroundColorTertiary: #393939;
-  $colorButton: #000000;
+  --color-text-primary: #{$colorTextPrimary-dark};
+  --color-text-secondary: #{$colorTextSecondary-dark};
+  --background-color-primary: #{$backgroundColorPrimary-dark};
+  --background-color-secondary: #{$backgroundColorSecondary-dark};
+  --background-color-tertiary: #{$backgroundColorTertiary-dark};
+  --background-color-fourth: #{$backgroundColorFourth-dark};
+  --background-color-chosen-scientist: #{$backgroundColorChosenScientist-dark};
+  --color-button: #{$colorButton-dark};
+  --color-true: #{$colorTrue-dark};
+  --color-false: #{$colorFalse-dark};
+  --color-backdrop: #{$colorBackdrop-dark};
+  --modal-dinosaur: #{$modalDinosaur-dark};
+  --shadow: #{$shadow-dark};
+  --soccer-field: #{$soccerField-dark};
+  --main-background: #{$mainBackground-dark};
+  --color-dot: #{$colorDot-dark};
+  --background-dot: #{$backgroundDot-dark};
 }

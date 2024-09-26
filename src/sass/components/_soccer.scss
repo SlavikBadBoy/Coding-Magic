@@ -2,8 +2,8 @@
   width: 720px;
   height: 220px;
   border-radius: 37px;
-  background: $soccerField;
-  border: 2px solid $colorTextPrimary;
+  background: var(--soccer-field);
+  border: 2px solid var(--color-text-primary);
   position: relative;
   overflow: hidden;
 }

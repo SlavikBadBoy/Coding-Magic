@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $colorBackdrop;
+  background-color: var(--color-backdrop);
   opacity: 1;
   z-index: 998;
   transition: opacity 250ms ease-in-out;
@@ -26,7 +26,7 @@
   padding: 45px 92px;
   transform: translate(-50%, -50%) scale(1);
   border-radius: 20px;
-  background: $colorButton;
+  background: var(--color-button);
   overflow: hidden;
 
   background-image: url(/src/images/greeting-modal/sword.svg),
@@ -72,16 +72,16 @@
   &__input {
     max-width: 170px;
     padding: 10px 90px 10px 10px;
-    color: $colorTextSecondary;
-    background-color: $backgroundColorPrimary;
+    color: var(--color-text-secondary);
+    background-color: var(--background-color-primary);
     border-radius: 20px;
     align-items: center;
   }
 
   &__button {
     padding: 10px 20px;
-    color: $colorButton;
-    background-color: $colorTextPrimary;
+    color: var(--color-button);
+    background-color: var(--color-text-primary);
     border-radius: 20px;
   }
 }

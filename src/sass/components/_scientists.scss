@@ -43,7 +43,7 @@
     border-radius: 20px;
     min-height: 110px;
     padding: 36.4px 0px 36.4px 0px;
-    background: $backgroundColorFourth;
+    background: var(--background-color-fourth);
     flex-basis: calc((100% - 177px) / 4);
     min-width: 110px;
     padding-inline: 22px;
@@ -64,5 +64,5 @@
   min-height: 100px;
   flex-basis: auto;
   border-radius: 20px;
-  background: $backgroundColorFourth;
+  background: var(--background-color-fourth);
 }

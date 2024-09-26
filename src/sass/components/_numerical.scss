@@ -7,22 +7,27 @@
 
 .form__numerical {
   display: flex;
-  box-shadow: 3px 3px 0px 0px $shadow;
+  box-shadow: 3px 3px 0px 0px var(--shadow);
   border-radius: 20px;
 }
 .input__numerical {
   max-width: 150px;
   padding: 10px 45px 10px 10px;
   border-radius: 20px 0px 0px 20px;
-  background-color: $backgroundColorPrimary;
+  background-color: var(--background-color-primary);
 }
+
+html[data-theme='dark'] .button__numerical {
+  background-color: var(--color-text-primary-dark);
+}
+
 .button__numerical {
   width: 35px;
   height: 35px;
 
   gap: 10px;
   border-radius: 0px 20px 20px 0px;
-  background-color: $colorTextPrimary;
+  background-color: var(--color-text-primary);
   background-image: url(/src/images//buttonIcon/search.svg);
   background-repeat: no-repeat;
   background-position: center;

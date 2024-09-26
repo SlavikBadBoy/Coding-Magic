@@ -1,0 +1,21 @@
+@mixin generate-color-vars($theme: light) {
+  @if $theme == light {
+    --color-text-primary: #{$color-text-primary-light};
+    --color-text-secondary: #{$color-text-secondary-light};
+    --background-color-primary: #{$background-color-primary-light};
+    /* інші кольори... */
+  } @else if $theme == dark {
+    --color-text-primary: #{$color-text-primary-dark};
+    --color-text-secondary: #{$color-text-secondary-dark};
+    --background-color-primary: #{$background-color-primary-dark};
+    /* інші кольори для темної теми... */
+  }
+}
+
+:root {
+  @include generate-color-vars(light);
+}
+
+[data-theme='dark'] {
+  @include generate-color-vars(dark);
+}
