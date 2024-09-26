@@ -1,4 +1,4 @@
-import team from './data/team';
+import team from './data/team.js';
 
 export const ourTeamInit = () => {
   const teamList = document.querySelector('.our-team');
@@ -13,9 +13,7 @@ export const ourTeamInit = () => {
               `<li class="team-item">
                     <article class ='teammate__article'>
                         
-            <img class="footo__teamate" src="${teammate.img}" alt="person" />
-
-
+            <img class="footo__teamate" src="${teammate.img}" alt="person">
                         <p class="name__teammate">${teammate.name}</p>
                         <p class="info__teammate">${teammate.temmeteInfo}</p>
                     </article>
@@ -64,6 +62,3 @@ export const ourTeamInit = () => {
     });
   });
 };
-window.addEventListener('load', () => {
-  ourTeamInit();
-});

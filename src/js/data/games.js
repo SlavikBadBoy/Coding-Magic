@@ -1,5 +1,6 @@
 import { rockPaperScissorsInit } from '../rock-paper-scissors.js';
 import { dinosaurInit } from '../google__dinosaur.js';
+import { ourTeamInit } from '../our-team.js';
 
 export default [
   {
@@ -57,6 +58,7 @@ export default [
     name: 'Наша команда',
     category: ['acquaintance', 'all'],
     class: 'our-team',
+    init: ourTeamInit,
   },
   {
     id: 10,

@@ -16,7 +16,7 @@ export default [
     temmeteInfo: 'Секції: Високосний-рік, Футбол, Вгадай число',
   },
   {
-    img: '/src/images/our-tamate/max.jpg',
+    img: '../src/images/our-tamate/image.jpg',
     name: 'Аня',
     temmeteInfo: 'Секції: Калькулятор, fottre, Вчені',
   },
