@@ -1,0 +1,34 @@
+<div class="backdrop" data-backdrop>
+  <div class="modal" data-modal>
+    <div class="greeting__info info">
+      <h2 class="info__title">Привіт!</h2>
+      <p class="info__paragraph">
+        Ви потрапили на сайт інтерактивних ігор та завдань
+      </p>
+      <p class="info__paragraph">
+        Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+      </p>
+      <p class="info__paragraph">Бажаємо Вам гарно провести час!</p>
+    </div>
+
+    <form action="#" class="greeting__userinfo user-info" data-modal-form>
+      <label class="user-info__label" for="user-name">Введіть своє ім'я:</label>
+      <input
+        type="text"
+        class="user-info__input"
+        id="user-name"
+        placeholder="Ваше ім’я..."
+        data-modal-input
+      />
+      <button type="submit" class="user-info__button button" data-modal-send>
+        Зберегти
+      </button>
+    </form>
+
+    <button type="button" class="button__close" data-modal-close>
+      <svg class="close__svg">
+        <use href="/src/images/icons.svg#close"></use>
+      </svg>
+    </button>
+  </div>
+</div>
