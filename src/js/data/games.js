@@ -4,6 +4,8 @@ import { calculatorYearInit } from '../leap-year.js';
 import { numericalInit } from '../numerical.js';
 import { scientistsInit } from '../scientists.js';
 import { biggestNubmerInit } from '../biggest-number.js';
+import { timeCalculatorInit } from '../time_calculator.js';
+
 export default [
   {
     id: 1,
@@ -37,6 +39,7 @@ export default [
     name: 'Калькулятор часу',
     category: ['numerical', 'all'],
     class: 'time-calculator',
+    init: timeCalculatorInit,
   },
   {
     id: 6,
