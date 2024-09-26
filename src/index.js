@@ -8,4 +8,5 @@ import './js/numerical.js';
 import './js/calculator.js';
 import './js/greeting-modal.js';
 import './js/main-content';
+import './js/biggest-number';
 import './js/time_calculator';
