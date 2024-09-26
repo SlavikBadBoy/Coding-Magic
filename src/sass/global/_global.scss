@@ -73,6 +73,10 @@ input {
   background-color: var(--background-color-primary);
 }
 
+html[data-theme='dark'] input {
+  color: var(--color-text-primary-dark);
+}
+
 .game__container {
   padding: 36px 0;
   position: relative;
