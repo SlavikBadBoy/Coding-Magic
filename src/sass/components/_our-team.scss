@@ -4,6 +4,7 @@
 
 .team-slider {
   overflow: hidden;
+  margin-bottom: 25px;
 }
 .title__our-team {
   text-align: center;
@@ -16,10 +17,13 @@
   transform: translatex(0%);
   transition: transform 1s ease;
   margin-bottom: 24px;
-  gap: 20px;
 }
 .team-item {
   min-width: 100%;
+}
+.teammate__photo {
+  max-width: 200px;
+  height: 200px;
 }
 .left-button {
   position: absolute;
@@ -34,24 +38,21 @@
   top: 50%;
   right: -50px;
   background-image: url(/src/images/our-tamate/right.svg);
-  width: 50px;
+  width: 51px;
   height: 100px;
 }
 
 .name__teammate {
-  width: 115px;
-  height: 17px;
-  padding: 20px;
+  margin: 20px 0;
+  font-size: 14px;
 }
 .info__teammate {
-  width: 315px;
-  height: 15px;
+  max-width: 315px;
+  line-height: calc(15 / 12);
 }
 .footo__teamate {
-  width: 150px;
-  height: 150px;
-
   border-radius: 20px;
+  max-height: 100%;
 }
 .pagination {
   display: flex;
@@ -62,11 +63,11 @@
   width: 40px;
   height: 5px;
   border-radius: 30px;
-  background-color: #bbb;
+  background-color: $colorDot;
   cursor: pointer;
 }
 .dot.active {
-  background-color: #717171;
+  background-color: $backgroundDot;
 }
 
 .teammate__article {

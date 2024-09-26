@@ -12,8 +12,9 @@ export const ourTeamInit = () => {
             teammate =>
               `<li class="team-item">
                     <article class ='teammate__article'>
-                        
-            <img class="footo__teamate" src="${teammate.img}" alt="person">
+                        <div class = 'teammate__photo'> 
+                            <img class="footo__teamate" src="${teammate.img}" alt="person">
+                        </div>
                         <p class="name__teammate">${teammate.name}</p>
                         <p class="info__teammate">${teammate.temmeteInfo}</p>
                     </article>
