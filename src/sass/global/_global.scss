@@ -16,7 +16,12 @@ input::-webkit-inner-spin-button {
 label {
   display: none;
 }
-
+.hidden {
+  display: none;
+}
+.no-scroll {
+  overflow: hidden;
+}
 .title {
   font-family: $fontTextPrimary;
   font-size: 16px;
@@ -28,6 +33,10 @@ label {
 }
 .hidden {
   display: none;
+}
+input {
+  color: $colorTextSecondary;
+  background-color: $backgroundColorPrimary;
 }
 
 .section {
@@ -48,6 +57,7 @@ label {
     transform: translate(-50%, -50%);
   }
 }
+
 @media (min-width: 1024px) {
 }
 @media (min-width: 768px) {
