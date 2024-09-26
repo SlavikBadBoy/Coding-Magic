@@ -35,8 +35,7 @@ label {
 input {
   color: $colorTextSecondary;
   background-color: $backgroundColorPrimary;
-
-
+}
 .section {
   padding-top: 36px;
 }
@@ -54,9 +53,8 @@ input {
 
     transform: translate(-50%, -50%);
   }
-
 }
-  
+
 @media (min-width: 1024px) {
 }
 @media (min-width: 768px) {
