@@ -16,7 +16,7 @@ placeholder="Введіть рік народження"
 <button class="button__check-year" id="checkYearButton"></button>
 </form>
 
-<p class="result__check-year" id="result"></p>
+<p class="result__check-year" id="result">Щоб почати, введи свій рік народження!</p>
 `;
   const calculatorYear = document.querySelector('#year');
   const result = document.querySelector('#result');

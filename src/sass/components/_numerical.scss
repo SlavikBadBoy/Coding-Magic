@@ -2,9 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 202px;
   position: relative;
-  border-right-style: 50px;
 }
 
 .form__numerical {
@@ -13,8 +11,7 @@
   border-radius: 20px;
 }
 .input__numerical {
-  width: 150px;
-  height: 35px;
+  max-width: 150px;
   padding: 10px 45px 10px 10px;
   border-radius: 20px 0px 0px 20px;
   background-color: $backgroundColorPrimary;
@@ -22,23 +19,14 @@
 .button__numerical {
   width: 35px;
   height: 35px;
-  top: 73px;
-  left: 612px;
-  padding-top: 10px;
+
   gap: 10px;
   border-radius: 0px 20px 20px 0px;
-  background-color: black;
+  background-color: $colorTextPrimary;
   background-image: url(/src/images//buttonIcon/search.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 .result__numerical {
-  width: 224px;
-  height: 15px;
-  top: 446px;
-  left: 784px;
-  gap: 0px;
-  opacity: 0px;
-
   text-align: right;
 }

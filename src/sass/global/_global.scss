@@ -27,6 +27,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 36px;
+
+  max-width: 1440px;
+  background-image: url('/src/images/background.png');
+  background-size: cover;
+  margin: 0 auto;
 }
 
 .title {
