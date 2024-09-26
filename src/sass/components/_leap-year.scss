@@ -1,0 +1,35 @@
+.calculator-year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+}
+
+.form__check-year {
+  display: flex;
+  box-shadow: 3px 3px 0px 0px $shadow;
+  border-radius: 20px;
+}
+.input__check-year {
+  width: 180px;
+  padding: 10px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: $backgroundColorPrimary;
+}
+.button__check-year {
+  width: 35px;
+  height: 35px;
+
+  padding-top: 10px;
+  gap: 10px;
+  border-radius: 0px 20px 20px 0px;
+  background-color: $colorTextPrimary;
+  background-image: url(/src/images/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.result__check-year {
+  font-weight: 400;
+  text-align: right;
+}

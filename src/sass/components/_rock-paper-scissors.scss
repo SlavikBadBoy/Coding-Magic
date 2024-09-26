@@ -6,6 +6,10 @@
     gap: 36px;
   }
 
+  &__title {
+    margin-bottom: 0;
+  }
+
   &__button {
     background-color: $colorTextPrimary;
     color: white;
