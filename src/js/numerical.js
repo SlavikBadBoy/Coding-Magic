@@ -1,9 +1,11 @@
 export const numericalInit = () => {
   const title = document.querySelector('.guess-number__container');
   const createTitle = document.createElement('h2');
+  createTitle.classList.add('title');
 
   createTitle.classList.add('title__numerical');
   createTitle.textContent = 'Вгадай число, яке загадав комп’ютер';
+
   title.prepend(createTitle);
   const numerical = document.querySelector('.guess-number');
   numerical.innerHTML = `<form action="#" class="form__numerical">
@@ -16,12 +18,12 @@ export const numericalInit = () => {
 <button type='button' class="button__numerical" id="checkNumber"></button>
 </form>
 
-<p class="result__numerical" id="result">Щоб почати гру, напишіть будь яке число від 1 до 10!</p>
+<p class="result__numerical" id="result-numerical">Щоб почати гру, напишіть будь яке число від 1 до 10!</p>
 `;
 
   const number = document.querySelector('#number');
   const buttonCheckNumber = document.querySelector('#checkNumber');
-  const result = document.querySelector('#result');
+  const result = document.querySelector('#result-numerical');
 
   let randomNumber = Math.floor(Math.random() * 10) + 1;
 

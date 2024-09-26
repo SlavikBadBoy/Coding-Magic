@@ -76,7 +76,4 @@ export const calculatorInit = () => {
     }
   };
   equals.addEventListener('focus', handlerResult);
-
-window.addEventListener('load', () => {
-  calculatorInit();
-});
+};

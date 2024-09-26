@@ -8,8 +8,10 @@ class GoogleDinosaur {
         `;
     this.dino = document.querySelector('.dino');
     this.gameArea = document.querySelector('.game__container--dino');
+    this.gameContainer = document.querySelector('.google-dinosaur__container');
     this.gameOver = false;
     this.isJumping = false;
+    this.renderTitle();
     this.gameModalStart();
   }
 
@@ -47,6 +49,13 @@ class GoogleDinosaur {
     });
     this.renderObstacles();
     this.checkCollision();
+  }
+
+  renderTitle() {
+    const gameTitle = document.createElement('h2');
+    gameTitle.classList.add('title');
+    gameTitle.textContent = 'Google динозавр';
+    this.gameContainer.prepend(gameTitle);
   }
 
   jump() {
