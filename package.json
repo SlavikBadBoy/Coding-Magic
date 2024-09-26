@@ -2,14 +2,14 @@
   "name": "coding-magic",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://SlavikBadBoy.github.io/coding-magic",
+  "homepage": "https://github.com/SlavikBadBoy/coding-magic",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /coding-magic/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SlavikBadBoy/coding-magic"
+    "url": "git+https://github.com/SlavikBadBoy/coding-magic.git"
   },
   "keywords": [],
   "author": "SlavikBadBoy <buracenkoslavik@gmail.com>",

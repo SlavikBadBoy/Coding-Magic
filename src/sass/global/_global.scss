@@ -16,7 +16,12 @@ input::-webkit-inner-spin-button {
 label {
   display: none;
 }
-
+.hidden {
+  display: none;
+}
+.no-scroll {
+  overflow: hidden;
+}
 .title {
   font-family: $fontTextPrimary;
   font-size: 16px;
@@ -27,6 +32,31 @@ label {
   max-width: 1090px;
   margin: 0 auto;
 }
+input {
+  color: $colorTextSecondary;
+  background-color: $backgroundColorPrimary;
+
+
+.section {
+  padding-top: 36px;
+}
+
+.game__container {
+  position: relative;
+  &::after {
+    content: '';
+    background-color: $colorTextPrimary;
+    height: 1px;
+    width: 536px;
+    position: absolute;
+    bottom: -36px;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+}
+  
 @media (min-width: 1024px) {
 }
 @media (min-width: 768px) {
