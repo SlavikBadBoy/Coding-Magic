@@ -32,6 +32,13 @@ label {
   padding-top: 36px;
 }
 
+main {
+  max-width: 1440px;
+  background-image: url('/src/images/background.png');
+  background-size: cover;
+  margin: 0 auto;
+}
+
 .game__container {
   position: relative;
   &::after {

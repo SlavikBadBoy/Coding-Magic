@@ -1,10 +1,17 @@
 .game__container--dino {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 300px;
   overflow: hidden;
   background-image: url('/src/images/dinosaur/game-background.png');
-  background-size: contain;
+  background-color: transparent;
+  background-size: cover;
+  background-position-x: 70%;
+}
+
+.google-dinosaur {
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .dino {
@@ -25,7 +32,7 @@
   width: 30px;
   height: 60px;
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   right: 0;
   animation: moveObstacle 2s linear infinite;
 }
