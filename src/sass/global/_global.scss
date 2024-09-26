@@ -30,11 +30,12 @@ main {
   flex-direction: column;
   gap: 36px;
 
-  max-width: 1440px;
   background-image: url('/src/images/background.png');
-  background-size: cover;
+  background-size: contain;
   margin: 0 auto;
   background-color: $mainBackground;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .title {
