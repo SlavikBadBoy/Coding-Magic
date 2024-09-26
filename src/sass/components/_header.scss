@@ -74,6 +74,9 @@ html[data-theme='dark'] .links__link--interactive::after {
   min-width: 160px;
   visibility: hidden;
   opacity: 0;
+  background-color: var(--color-button);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
 
   &__wrapper {

@@ -1,7 +1,7 @@
 import photoMax from '../../images/our-tamate/maksym.jpg';
 import photoVlad from '../../images/our-tamate/vlad.jpg';
 import photoVyac from '../../images/our-tamate/vyacheslav.jpg';
-import photoAnna from '../../images/our-tamate/maksym.jpg';
+import photoAnna from '../../images/our-tamate/anya.jpg';
 
 export default [
   {
@@ -21,7 +21,7 @@ export default [
     temmeteInfo: 'Секції: Високосний-рік, Футбол, Вгадай число, Наша-команда',
   },
   {
-    img: `../images/our-tamate/maksym.jpg`,
+    img: photoAnna,
     name: 'Аня',
     temmeteInfo: 'Секції: Калькулятор, Підвал сайту, Вчені',
   },
