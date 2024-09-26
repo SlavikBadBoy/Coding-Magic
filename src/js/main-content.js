@@ -39,6 +39,7 @@ const submenuHandler = event => {
     case 'games':
       renderGames(games, 'game');
       break;
+      tt;
     case 'acquaintance':
       renderGames(games, 'acquaintance');
       break;

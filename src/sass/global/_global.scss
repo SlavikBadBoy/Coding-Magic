@@ -7,8 +7,12 @@ body {
   font-family: $fontTextPrimary;
   font-weight: 400;
   font-size: 12px;
-  color: $colorTextPrimary;
+  color: var(--color-text-primary);
   padding-bottom: 30px;
+}
+
+html[data-theme='dark'] body {
+  background-color: var(--color-button);
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -27,13 +31,17 @@ label {
 
 main {
   display: flex;
+  max-width: 1440px;
+
   flex-direction: column;
   gap: 36px;
-
-  background-image: url('/src/images/background.png');
-  background-size: contain;
   margin: 0 auto;
-  background-color: $mainBackground;
+  background-color: var(--main-background);
+}
+
+main.img {
+  background-image: url('/src/images/background.png');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -54,8 +62,8 @@ main {
   display: none;
 }
 input {
-  color: $colorTextSecondary;
-  background-color: $backgroundColorPrimary;
+  color: var(--color-text-secondary);
+  background-color: var(--background-color-primary);
 }
 
 .game__container {
@@ -63,7 +71,7 @@ input {
   position: relative;
   &::after {
     content: '';
-    background-color: $colorTextPrimary;
+    background-color: var(--color-text-primary);
     height: 1px;
     width: 536px;
     position: absolute;
@@ -74,7 +82,7 @@ input {
   }
 }
 
-section:nth-child(10) .game__container {
+section:last-child .game__container {
   &::after {
     display: none;
   }

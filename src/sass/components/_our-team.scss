@@ -33,6 +33,15 @@
   width: 50px;
   height: 100px;
 }
+
+html[data-theme='dark'] .left-button {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(129deg) brightness(106%) contrast(101%);
+}
+html[data-theme='dark'] .right-button {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(129deg) brightness(106%) contrast(101%);
+}
 .right-button {
   position: absolute;
   top: 50%;
@@ -63,11 +72,11 @@
   width: 40px;
   height: 5px;
   border-radius: 30px;
-  background-color: $colorDot;
+  background-color: var(--color-dot);
   cursor: pointer;
 }
 .dot.active {
-  background-color: $backgroundDot;
+  background-color: var(--background-dot);
 }
 
 .teammate__article {

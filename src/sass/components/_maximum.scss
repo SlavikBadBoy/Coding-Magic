@@ -13,7 +13,7 @@
   padding: 10px 20px 10px 20px;
   border-radius: 20px;
   text-align: center;
-  background-color: $backgroundColorPrimary;
-  color: $colorTextSecondary;
-  box-shadow: 3px 3px 0 0 $shadow;
+  background-color: var(--background-color-primary);
+  color: var(--color-text-secondary);
+  box-shadow: 3px 3px 0 0 var(--shadow);
 }

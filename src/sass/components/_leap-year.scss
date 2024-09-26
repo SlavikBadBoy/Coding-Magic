@@ -8,14 +8,18 @@
 
 .form__check-year {
   display: flex;
-  box-shadow: 3px 3px 0px 0px $shadow;
+  box-shadow: 3px 3px 0px 0px var(--shadow);
   border-radius: 20px;
 }
 .input__check-year {
   width: 180px;
   padding: 10px;
   border-radius: 20px 0px 0px 20px;
-  background-color: $backgroundColorPrimary;
+  background-color: var(--background-color-primary);
+}
+
+html[data-theme='dark'] .button__check-year {
+  background-color: var(--color-text-primary-dark);
 }
 .button__check-year {
   width: 35px;
@@ -24,7 +28,7 @@
   padding-top: 10px;
   gap: 10px;
   border-radius: 0px 20px 20px 0px;
-  background-color: $colorTextPrimary;
+  background-color: var(--color-text-primary);
   background-image: url(/src/images/search.svg);
   background-repeat: no-repeat;
   background-position: center;

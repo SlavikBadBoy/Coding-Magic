@@ -13,14 +13,14 @@
     background-size: 30px;
     background-position-x: 10%, 20%, 80%, 90%;
     background-position-y: 36%, 64%, 64%, 36%;
-    background-color: $colorButton;
+    background-color: var(--color-button);
     border-radius: 20px;
   }
   &__title {
     font-family: $fontTextSecondary;
     font-size: 20px;
     text-align: center;
-    color: $colorTextPrimary;
+    color: var(--color-text-primary);
     padding-top: 83px;
     font-weight: 400;
   }
