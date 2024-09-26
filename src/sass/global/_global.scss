@@ -76,6 +76,12 @@ input {
   max-width: 576px;
 }
 
+.google-dinosaur,
+.soccer {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
 @media (min-width: 1024px) {
 }
 @media (min-width: 768px) {

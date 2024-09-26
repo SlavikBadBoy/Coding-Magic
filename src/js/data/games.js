@@ -5,6 +5,7 @@ import { numericalInit } from '../numerical.js';
 import { scientistsInit } from '../scientists.js';
 import { biggestNubmerInit } from '../biggest-number.js';
 import { timeCalculatorInit } from '../time_calculator.js';
+import { soccerInit } from '../soccer.js';
 
 export default [
   {
@@ -53,6 +54,7 @@ export default [
     name: 'Футбол',
     category: ['game', 'all'],
     class: 'soccer',
+    init: soccerInit,
   },
   {
     id: 8,
