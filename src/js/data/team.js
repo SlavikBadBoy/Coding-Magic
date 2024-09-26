@@ -1,6 +1,6 @@
 export default [
   {
-    img: '/src/images/our-tamate/vyecek.jpg',
+    img: './images/our-tamate/image.jpg',
     name: "В'ячеслав",
     temmeteInfo: 'Секції: 3-числа, Наша-команда, Калькулятор часу',
   },
@@ -16,7 +16,7 @@ export default [
     temmeteInfo: 'Секції: Високосний-рік, Футбол, Вгадай число',
   },
   {
-    img: '../src/images/our-tamate/image.jpg',
+    img: `../images/our-tamate/maksym.jpg`,
     name: 'Аня',
     temmeteInfo: 'Секції: Калькулятор, fottre, Вчені',
   },
