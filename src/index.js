@@ -6,3 +6,4 @@ import './js/google__dinosaur.js';
 import './js/leap-year.js';
 import './js/numerical.js';
 import './js/calculator.js';
+import './js/greeting-modal.js';

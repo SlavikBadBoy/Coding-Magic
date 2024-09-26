@@ -5,6 +5,7 @@ const closeModalHandler = event => {
   if (event.target.closest('[data-modal-close]')) {
     backdrop.classList.add('is-hidden');
     modal.removeEventListener('click', closeModalHandler); // Спочатку видаляємо обробник події
+    document.body.classList.remove('no-scroll');
     setTimeout(() => {
       backdrop.remove();
     }, 250);
@@ -24,6 +25,7 @@ const modalFormHandler = event => {
     output.innerHTML = `Вітаємо, ${inputValue}!`;
 
     backdrop.classList.add('is-hidden');
+    document.body.classList.remove('no-scroll');
     modal.removeEventListener('click', closeModalHandler); // Спочатку видаляємо обробник події
     setTimeout(() => {
       backdrop.remove();
