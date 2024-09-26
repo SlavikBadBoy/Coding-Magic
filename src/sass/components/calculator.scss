@@ -8,7 +8,6 @@
     margin: 0 auto;
   }
   &__input {
-    @extend %inputStyle;
     padding: 10px 20px;
     border-radius: 20px;
     text-align: center;
