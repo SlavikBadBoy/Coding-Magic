@@ -1,4 +1,4 @@
-import games from './data/games';
+import games from './data/games.js';
 
 const renderGames = (games, category) => {
   const main = document.querySelector('#main');

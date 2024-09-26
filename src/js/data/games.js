@@ -7,6 +7,7 @@ import { biggestNubmerInit } from '../biggest-number.js';
 import { timeCalculatorInit } from '../time_calculator.js';
 import { soccerInit } from '../soccer.js';
 import { calculatorInit } from '../calculator.js';
+import { ourTeamInit } from '../our-team.js';
 
 export default [
   {
@@ -70,6 +71,7 @@ export default [
     name: 'Наша команда',
     category: ['acquaintance', 'all'],
     class: 'our-team',
+    init: ourTeamInit,
   },
   {
     id: 10,
