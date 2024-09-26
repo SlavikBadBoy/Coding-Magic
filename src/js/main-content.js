@@ -1,7 +1,8 @@
-import games from './games';
+import games from './data/games';
 
 const renderGames = (games, category) => {
   const main = document.querySelector('#main');
+
   const filteredGames = games.filter(
     game => category === 'all' || game.category.includes(category)
   );
@@ -10,10 +11,10 @@ const renderGames = (games, category) => {
     .map(
       game =>
         `<section class='section'>
-      <div class="container">
-        <div class="game ${game.class}"></div>
-      </div>
-    </section>`
+    <div class="container ${game.class}__container game__container">
+      <div class="game ${game.class}"></div>
+    </div>
+  </section>`
     )
     .join('');
 
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const submenu = document.querySelector('.submenu');
+
 const submenuHandler = event => {
   switch (event.target.dataset.category) {
     case 'numerical':

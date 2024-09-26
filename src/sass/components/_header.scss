@@ -76,7 +76,7 @@
     padding: 10px 50px;
     text-align: center;
     &:hover {
-      background-color: $backgroundColorTertiary;
+      background-color: transparent;
     }
     &:last-child:hover {
       border-bottom-left-radius: 20px;
@@ -88,6 +88,11 @@
 .links__item--interactive:hover .submenu {
   opacity: 1;
   visibility: visible;
+}
+
+.menu__login {
+  display: flex;
+  align-items: center;
 }
 
 // switch
