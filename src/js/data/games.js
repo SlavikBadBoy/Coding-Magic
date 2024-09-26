@@ -6,6 +6,7 @@ import { scientistsInit } from '../scientists.js';
 import { biggestNubmerInit } from '../biggest-number.js';
 import { timeCalculatorInit } from '../time_calculator.js';
 import { soccerInit } from '../soccer.js';
+import { calculatorInit } from '../calculator.js';
 
 export default [
   {
@@ -34,6 +35,7 @@ export default [
     name: 'Калькулятор',
     category: ['numerical', 'all'],
     class: 'calculator',
+    init: calculatorInit,
   },
   {
     id: 5,

@@ -80,6 +80,9 @@
 
   &__button {
     padding: 10px 20px;
+    color: $colorButton;
+    background-color: $colorTextPrimary;
+    border-radius: 20px;
   }
 }
 
