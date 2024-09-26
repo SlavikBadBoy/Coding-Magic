@@ -33,6 +33,7 @@ main {
   background-image: url('/src/images/background.png');
   background-size: cover;
   margin: 0 auto;
+  background-color: $mainBackground;
 }
 
 .title {
@@ -68,6 +69,12 @@ input {
     left: 50%;
 
     transform: translate(-50%, -50%);
+  }
+}
+
+section:nth-child(10) .game__container {
+  &::after {
+    display: none;
   }
 }
 
