@@ -1,4 +1,4 @@
-import scientists from './scientists-array.js';
+import scientists from './data/scientists-array.js';
 export const scientistsInit = () => {
   const game = document.querySelector('.scientist');
   game.innerHTML = `<h2 class="scientist__title title">Обери вченого/их</h2>
