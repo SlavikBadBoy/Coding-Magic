@@ -1,10 +1,8 @@
 .time-calculator {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 .time-calculator__title {
-  font-size: 20px;
   margin-bottom: 36px;
   display: flex;
   justify-content: center;
@@ -16,8 +14,6 @@
   align-items: center;
   &::after {
     content: '- - - - - - - - - - - - -';
-    width: 100px;
-    height: 1px;
     display: flex;
     align-items: center;
   }
@@ -32,27 +28,25 @@
   padding: 10px 45px 10px 10px;
   border-radius: 20px 0 0 20px;
   text-align: center;
-
-  
+  max-width: 150px;
   background-color: $backgroundColorPrimary;
   font-size: 12px;
   color: $colorTextSecondary;
 }
 
 .time-calculator__button {
-  justify-content: center;
   background-repeat: no-repeat;
   background-image: url(/src/images/time_calculator/search_icon.svg);
-  background-position: center;
-  background-color: black;
-  padding: 10px;
+  background-size: 15px;
   width: 35px;
   height: 35px;
+  background-position: center;
+  background-color: $colorTextPrimary;
+  padding: 10px;
+
   border-radius: 0 20px 20px 0;
- 
 }
 .time-calculator_result {
   font-size: 12px;
-  align-self: center;
   order: 2;
 }
