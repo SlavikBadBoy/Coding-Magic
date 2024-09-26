@@ -35,13 +35,15 @@ const submenuHandler = event => {
   switch (event.target.dataset.category) {
     case 'numerical':
       renderGames(games, 'numerical');
+      document.querySelector('main').classList.add('fiximg');
       break;
     case 'games':
       renderGames(games, 'game');
+      document.querySelector('main').classList.add('fiximg');
       break;
-      tt;
     case 'acquaintance':
       renderGames(games, 'acquaintance');
+      document.querySelector('main').classList.add('fiximg');
       break;
 
     default:

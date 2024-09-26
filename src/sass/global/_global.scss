@@ -31,8 +31,6 @@ label {
 
 main {
   display: flex;
-  max-width: 1440px;
-
   flex-direction: column;
   gap: 36px;
   margin: 0 auto;
@@ -41,9 +39,14 @@ main {
 
 main.img {
   background-image: url('/src/images/background.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+main.fiximg {
+  max-width: 1440px;
+  background-size: cover;
 }
 
 .title {
