@@ -10,7 +10,7 @@ const renderGames = (games, category) => {
   main.innerHTML = filteredGames
     .map(
       game =>
-        `<section class='section'>
+        `<section class='section' data-aos="fade-up"> 
     <div class="container ${game.class}__container game__container">
       <div class="game ${game.class}"></div>
     </div>

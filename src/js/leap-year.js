@@ -13,7 +13,7 @@ type="number"
 id="year"
 placeholder="Введіть рік народження"
 />
-<button class="button__check-year" id="checkYearButton"></button>
+<button  class="button__check-year" id="checkYearButton"></button>
 </form>
 
 <p class="result__check-year" id="result">Щоб почати, введи свій рік народження!</p>
