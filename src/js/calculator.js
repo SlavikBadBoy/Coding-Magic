@@ -35,10 +35,19 @@ export const calculatorInit = () => {
   const result = document.querySelector('#calculator-result');
   const actions = document.querySelector('[data-actions]');
   const equals = document.querySelector('#operator-equals');
+  let selectedButton = null;
   let operator = '';
   //кольорові рамки
   const actionHandler = event => {
-    operator = event.target.dataset.action;
+    const clickedButton = event.target;
+    operator = clickedButton.dataset.action;
+
+    if (selectedButton) {
+      selectedButton.style.border = 'none';
+    }
+
+    clickedButton.style.border = '1px solid green';
+    selectedButton = clickedButton;
   };
   actions.addEventListener('click', actionHandler);
 
@@ -47,6 +56,7 @@ export const calculatorInit = () => {
       case '+':
         result.textContent =
           parseFloat(firstNumber.value) + parseFloat(secondNumber.value);
+
         break;
       case '*':
         result.textContent =
