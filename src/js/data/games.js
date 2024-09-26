@@ -1,7 +1,8 @@
 import { rockPaperScissorsInit } from '../rock-paper-scissors.js';
 import { dinosaurInit } from '../google__dinosaur.js';
-import { calculatorYearInit } from '../leap-year.js'
+import { calculatorYearInit } from '../leap-year.js';
 import { numericalInit } from '../numerical.js';
+import { scientistsInit } from '../scientists.js';
 export default [
   {
     id: 1,
@@ -66,5 +67,6 @@ export default [
     name: 'Вчений',
     category: ['acquaintance', 'all'],
     class: 'scientist',
+    init: scientistsInit,
   },
 ];

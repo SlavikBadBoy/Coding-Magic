@@ -27,15 +27,18 @@ label {
   font-size: 16px;
   line-height: calc(20px / 16px);
 }
-
 .container {
   max-width: 1090px;
   margin: 0 auto;
+}
+.hidden {
+  display: none;
 }
 input {
   color: $colorTextSecondary;
   background-color: $backgroundColorPrimary;
 }
+
 .section {
   padding-top: 36px;
 }
