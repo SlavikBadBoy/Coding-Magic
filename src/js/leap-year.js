@@ -3,6 +3,7 @@ export const calculatorYearInit = () => {
   const createTitle = document.createElement('h2');
 
   createTitle.classList.add('title__leap-year');
+  createTitle.classList.add('title');
   createTitle.textContent = 'Перевір в який рік ти народився';
   title.prepend(createTitle);
   const leapYear = document.querySelector('.calculator-year');
@@ -15,16 +16,16 @@ placeholder="Введіть рік народження"
 <button class="button__check-year" id="checkYearButton"></button>
 </form>
 
-<p class="result__check-year" id="result"></p>
+<p class="result__check-year" id="result">Щоб почати, введи свій рік народження!</p>
 `;
   const calculatorYear = document.querySelector('#year');
   const result = document.querySelector('#result');
   const button = document.querySelector('#checkYearButton');
 
-  const checkCalculatorYear = (event) => {
-    event.preventDefault(); 
-    
-    const yearValue = calculatorYear.value.trim(); 
+  const checkCalculatorYear = event => {
+    event.preventDefault();
+
+    const yearValue = calculatorYear.value.trim();
 
     if (yearValue.length === 0) {
       result.innerHTML = 'Введіть ваш рік!';
@@ -38,8 +39,6 @@ placeholder="Введіть рік народження"
       result.innerHTML = 'Ви народилися не в високосний рік.';
       result.style.color = 'red';
     }
-
-    
   };
   button.addEventListener('click', checkCalculatorYear);
 };

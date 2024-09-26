@@ -5,13 +5,7 @@
 
   position: relative;
 }
-.title__leap-year {
-  text-align: center;
-  padding: 36px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: calc(19.5px);
-}
+
 .form__check-year {
   display: flex;
   box-shadow: 3px 3px 0px 0px $shadow;
@@ -19,10 +13,9 @@
 }
 .input__check-year {
   width: 180px;
-  height: 35px;
   padding: 10px;
   border-radius: 20px 0px 0px 20px;
-  background-color: $backgroundColorTertiary;
+  background-color: $backgroundColorPrimary;
 }
 .button__check-year {
   width: 35px;
@@ -37,8 +30,6 @@
   background-position: center;
 }
 .result__check-year {
-  font-size: 15px;
   font-weight: 400;
-  line-height: 14.63px;
   text-align: right;
 }

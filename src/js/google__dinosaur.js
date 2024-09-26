@@ -8,9 +8,32 @@ class GoogleDinosaur {
         `;
     this.dino = document.querySelector('.dino');
     this.gameArea = document.querySelector('.game__container--dino');
+    this.gameContainer = document.querySelector('.google-dinosaur__container');
     this.gameOver = false;
     this.isJumping = false;
-    this.init();
+    this.renderTitle();
+    this.gameModalStart();
+  }
+
+  gameModalStart() {
+    const modalHtml = `
+    <div class="dinosaur__modal show">
+      <p class="dinosaur__lose">Гугл динозаврик!</p>
+      <button class="dinosaur__restart button">Почати гру!</button>
+    </div>
+    `;
+    this.gameArea.insertAdjacentHTML('beforeend', modalHtml);
+
+    const modal = this.gameArea.querySelector('.dinosaur__modal');
+
+    const retryButton = this.gameArea.querySelector('.dinosaur__restart');
+    retryButton.addEventListener('click', () => {
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.remove();
+      }, 250);
+      this.init();
+    });
   }
 
   init() {
@@ -26,6 +49,13 @@ class GoogleDinosaur {
     });
     this.renderObstacles();
     this.checkCollision();
+  }
+
+  renderTitle() {
+    const gameTitle = document.createElement('h2');
+    gameTitle.classList.add('title');
+    gameTitle.textContent = 'Google динозавр';
+    this.gameContainer.prepend(gameTitle);
   }
 
   jump() {
