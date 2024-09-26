@@ -1,4 +1,9 @@
 export const soccerInit = () => {
+  const gameContainer = document.querySelector('.soccer__container');
+  const title = document.createElement('h2');
+  title.classList.add('title');
+  title.textContent = 'Футбол';
+  gameContainer.prepend(title);
   const soccer = document.querySelector('.soccer');
   soccer.innerHTML = `  
       <div class="soccer__yard" id="soccerYard">
@@ -7,7 +12,6 @@ export const soccerInit = () => {
   const yard = document.querySelector('#soccerYard');
   const ball = document.querySelector('#ball');
   const mouseDownHandler = event => {
-    ball.classList.add('rotate');
     ball.classList.add('rotate');
     setTimeout(() => {
       ball.classList.remove('rotate');
