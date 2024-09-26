@@ -45,6 +45,6 @@ export const biggestNubmerInit = () => {
   };
 
   biggestNumberInput.forEach(input =>
-    input.addEventListener('change', inputHandler)
+    input.addEventListener('input', inputHandler)
   );
 };

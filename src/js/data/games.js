@@ -3,6 +3,7 @@ import { dinosaurInit } from '../google__dinosaur.js';
 import { calculatorYearInit } from '../leap-year.js';
 import { numericalInit } from '../numerical.js';
 import { scientistsInit } from '../scientists.js';
+import { biggestNubmerInit } from '../biggest-number.js';
 export default [
   {
     id: 1,
@@ -55,6 +56,7 @@ export default [
     name: 'Найбільше число',
     category: ['numerical', 'all'],
     class: 'biggest-number',
+    init: biggestNubmerInit,
   },
   {
     id: 9,

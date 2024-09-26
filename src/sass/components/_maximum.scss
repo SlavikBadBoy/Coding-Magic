@@ -1,9 +1,7 @@
 .biggest-number {
   text-align: center;
 }
-.maximum__title {
-  margin-bottom: 36px;
-}
+
 .maximum__inputs {
   display: flex;
   justify-content: center;
@@ -16,11 +14,6 @@
   border-radius: 20px;
   text-align: center;
   background-color: $backgroundColorPrimary;
-  font-size: 12px;
   color: $colorTextSecondary;
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
-}
-.maximum__text {
-  font-size: 12px;
-  color: $colorTextPrimary;
+  box-shadow: 3px 3px 0 0 $shadow;
 }
