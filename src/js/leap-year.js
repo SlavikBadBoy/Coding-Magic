@@ -1,4 +1,10 @@
 export const calculatorYearInit = () => {
+  const main = document.querySelector('main');
+  const mainTitle = document.createElement('h2');
+  mainTitle.classList.add('main-title');
+  main.prepend(mainTitle);
+  mainTitle.textContent = 'Популярні інетрактивні ігри';
+
   const title = document.querySelector('.calculator-year__container');
   const createTitle = document.createElement('h2');
 

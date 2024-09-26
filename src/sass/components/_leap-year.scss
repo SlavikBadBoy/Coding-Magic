@@ -1,3 +1,21 @@
+.main-title {
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  padding-top: 36px;
+  &::after {
+    content: '';
+    background-color: var(--color-text-primary);
+    height: 1px;
+    width: 536px;
+    position: absolute;
+    bottom: -36px;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .calculator-year {
   display: flex;
   justify-content: space-between;
